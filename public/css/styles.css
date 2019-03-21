@@ -1,0 +1,482 @@
+body {
+
+}
+.social {
+	padding: 10px;
+	background:blue;
+	color: #fff;
+	font-size: 30px;
+	width:50px;
+	height:50px;
+	border-radius: 50%;
+	text-align: center;
+
+}
+.social:hover {
+	background:white;
+	color:blue;
+}
+.navbar .login li {
+	border-left:5px solid blue;
+	line-height:10px;
+}
+.navbar .login li a.nav-link:hover  {
+	color:white;
+}
+ .white {
+padding-left:10%;
+background: white !important;
+height: 150px;
+}
+.navbar .nav-text {
+	color:blue;
+	text-align: center;
+
+}
+
+.nav-text h1 {
+	font-size: 3em;
+	font-weight: 600;
+	font-family: palatino;
+}
+.search {
+	margin-left: 30%;
+}
+.search-icon {
+	font-size: 2em;
+}
+.navbar .navigation li {
+	padding:2px;
+}
+.navbar .navigation li:hover  {
+
+background:white;
+
+border-bottom:4px solid blue; 
+
+}
+
+.navbar .navigation li a.nav-link:hover {
+	color:blue;
+	transform:scale(1.0);
+}
+#carousel{
+	width: 100%;
+}
+.carousel-inner{
+	width:100%;
+}
+.carousel-caption h3{
+	text-transform: uppercase;;
+	font-size: 3em;
+}
+.school{
+	padding:0 10px 0 10px;
+	width:100%;
+	text-align: center;
+}
+.school h1{
+	text-transform: uppercase;
+	font-size: 1em;
+	color: white;
+}
+.card{
+	background:rgba(0,0,245,.8);
+}
+.icon
+{
+	font-size: 2em;
+	color: blue;
+	padding-top: 6px;
+	text-align: center;
+	width:50px;
+	height:50px;
+	border-radius: 50%;
+	background: white;
+}
+.school:hover{
+	transform:scale(1.4);
+}
+.events{
+	float: right;
+	margin-top:-150px;
+}
+.events .card-body{
+	background: white;
+}
+.events .card-header{
+	color:white;
+}
+.events .card-body{
+	color:blue;
+}
+.events .event-item {
+	border-bottom: 1px dotted blue;
+}
+.events .card-footer{
+	text-align: center;
+}
+.events .event-item h6{
+	color:rgba(0,0,0,.75);
+}
+.events .card{
+	box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+}
+#department h1,.contactus h1{
+	font-size: 2em;
+	font-family: palatino;
+	padding-left: 15px;
+	margin-top: 10px;
+	font-weight: 1000;
+	color: rgba(0,0,200,1);
+}
+.departments .first .card p{
+	height:100px;
+	overflow: hidden;
+}
+.departments .first .card{
+	width:100%;
+	margin-top: 10px;
+	}
+.departments .first img{
+	max-height: 200px;
+}
+.top-stories {
+	position: absolute;
+	margin-top: 450px;
+	float: right;
+	margin-left:67%;
+}
+.top-stories .card-body{
+	background: #fff;
+}
+#humanities img{
+	max-height: 150px;
+}
+#humanities p{
+	max-height: 80px;
+}
+#counseling p{
+	max-height: 74px;
+}
+
+footer{
+	background: black;
+	margin-top: 5px;
+}
+footer h4{
+	color:white;
+}
+footer p, footer a{
+	color:#999;
+}
+footer a:hover{
+	text-decoration: none;
+}
+footer .footer-body{
+	border-bottom: 1px solid #555;
+}
+footer .copy{
+	font-size: 0.8em;
+}
+footer .copy a{
+	font-size: 1em;
+	color: #811;
+}
+footer span{
+	margin-right: 5px;
+	color:white;
+}
+.owl-carousel .item{
+	background: #ccc;
+}
+
+.clubs .card-header{
+	min-height:200px !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+.clubs .card-body{
+	max-height: 200px;
+	overflow: hidden;
+}
+.clubs .card-header h3{
+	margin-top: 100px;
+	color: #ccc;
+	font-weight: 1000;
+	text-align: center;
+}
+.clubs-header h2{
+	color:blue;
+	border-bottom: 3px solid blue;
+	font-family: palatino;
+	font-weight: 700;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+/*
+	*
+	*
+	* About Us About Us About Us About Us About Us About Us About Us
+	*
+	*
+ */
+ .about-us .card-body img{
+ 	width: 100%;
+ 	height: 400px;
+ }
+ .about-us h1, .management h1, .staff h1,.fees h1,.awards h1, .tenders h1, .assignments h1{
+ 	background: rgba(0,0,245,.8);
+ 	width: 300px;
+ 	margin: auto;
+ 	border-radius: 10px 10px 0px 0px;
+ 	margin-top: 20px;
+ 	color: white;
+ 	text-align: center;
+ 	font-family: times;
+ }
+ .about-us p{
+ 	color:white;
+ }
+
+ .management{
+ 	margin-top: 20px;
+ }
+.management .card-body .name{
+	float:left;
+	display: block;
+	text-align: center;
+	font-style: italic;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 600;
+}
+.management .mngt-card .card{
+	background: white;
+}
+.staff{
+	margin-top: 20px;
+}
+.staff .card-body img{
+	max-height: 340px;
+}
+.staff .staff-body .card{
+	background: white;
+}
+.staff .staff-body h3{
+	text-align: center;
+}
+
+  /*
+	*
+	*
+	* Academics Academics Academics Academics Academics Academics Academics
+	*
+	*
+ */
+ .parallax{
+	height: auto;
+	background-repeat: repeat-x;
+	width:100%;
+}
+.parallax h1{
+	color:white;
+	text-align: center;
+	background: rgba(0,0,255,.3);
+	font-weight: 600;
+	margin: auto;
+	width: 400px;
+	margin-top: 50px;
+}
+.subjects{
+	margin-top: 20px;
+}
+.subjects-body .card{
+	background: white;
+}
+.subjects-body .subjects-no{
+	width: 100px;
+	height:100px;
+	border-radius: 50%;
+	border: 3px solid blue;
+	text-align: center;
+	margin: auto;
+	font-size: 4em;
+	}
+	.subjects-body h1{
+		text-align: center;
+	}
+	.subjects-list h2{
+		text-align: center;
+	}
+	.subjects-list ul{
+		list-style: none;
+	}
+	.uniforms .card{
+		min-height: 400px;
+		max-height: 400px;
+	}
+	.uniforms .card-body{
+		min-height: 100px;
+	}
+	.uniforms .card-footer{
+		text-align: center;
+		color: white;
+		font-weight: 1000;
+		font-family: times;
+	}	
+	.check{
+
+		text-align: center;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		color:white;
+		padding-top: 1.5px;
+		font-size: 1em;
+		background: blue;
+		margin-right: 4px;
+	}
+	
+	.fees .fees-body .card{
+		background: white;
+		padding: 0;
+		margin: 0;
+	}
+	.fees-body .card h4{
+		font-size: 1.2em;
+		display: inline-block;
+		color: blue;
+	}
+	.fees-body .term{
+		color: black;
+	}
+	.awards{
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: center center;
+		height: 50%;
+		margin-top: -10px;
+	}
+	.awards .awards-body ul{
+		list-style: none;
+	}
+	.awards .row{
+		margin-left: 70%;
+		margin-top: 30px;
+	}
+	.awards h1{
+		background: transparent;
+		font-weight: 1000;
+	}
+	.awards .awards-body ul li{
+		font-size: 1.5em;
+	}
+	.awards .check{
+		width: 30px;
+		height: 30px;
+	}
+
+	.departmentpage ul li {
+		display: block;
+	}
+	.departmentpage .card-body {
+		background:white;
+		color:blue;
+	}
+	.departmentpage img {
+ max-width: 100px;
+ min-height:100px;
+ float:left;
+
+	}
+
+
+	.departmentpage .row {
+		margin-top: 20px;
+	}
+	.departmentpage .card {
+		border:none;
+	}
+	.games .card-body {
+
+
+	}
+	.games .card {
+		border:none;
+	}
+	.games .card-header {
+		text-align: center;
+
+	}
+
+	.games .card-body img {
+		width:100%;
+		max-height: 250px;
+
+	}
+	.hod  {
+		text-align: center;
+	}
+	.hod img {
+		margin-left: 22%;
+		margin-top: 50px;
+	}
+	.hod .card {
+		background: white;
+		border: none;
+	}
+
+	.hod p {
+		color:white;
+	}
+
+
+	/*  eventspage styles */
+
+
+.eventspage .date {
+
+	width: 100px;
+
+	height:100px;
+	background:white;
+	text-align: center;
+	padding-top: 10px;
+font-size: 2em;
+font-weight: 1000;
+margin:auto;
+background: blue;
+color:white;
+font-family: times;
+}
+.eventspage .card .eventdetails {
+margin:auto;
+}
+.eventspage .card {
+	background:#f4f4f4;
+}
+
+.assignment-values .card {
+	width: 100%;
+	background: white;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.assignments #submit {
+	margin-top: 48px;
+	width:200px;
+}
+.contactus {
+	margin-top: 20px;
+}
+.contactus .contact-info {
+text-align: center;
+color:white;
+}
+
+.contactus .contact-info h6 {
+	color:#999;
+}

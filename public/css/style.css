@@ -1,0 +1,520 @@
+@import url("https://fonts.googleapis.com/css? familiy=Montserrat");
+body{
+	font-family: "Montserrat",sans-serif;
+}
+.social {
+	padding: 10px;
+	background-color: blue;
+	color: white;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+}
+.social:hover{
+	background: white;
+	color: blue;
+}
+.navbar .login li{
+	border-left: 5px solid blue;
+	line-height: 10px;
+	
+}
+.navbar .login li a.nav-link:hover{
+	color: white;
+}
+.logo{
+	background-color: green;
+	padding-left:0px;
+	height: 170px;
+
+
+}
+.navbar .nav-text{
+	color:green;
+	text-align: center;
+
+}
+.navbar .nav-text h1{
+	font-size:2em;
+	font-weight: 600;
+	font-family: palatino;
+	text-align: center;
+	padding-left:10px;
+}
+.search{
+	margin-left: 30%;
+	font-size: 2em;
+}
+.navbar .navigation li:hover {
+	background: white;
+	border-bottom: 4px solid green;
+}
+.navbar .navigation li a.nav-link:hover{
+	color:green;
+	transform: scale(1.0);
+}
+.navbar .navigation li{
+	padding: 2px;
+}
+
+ .carousel-inner img {
+      width: 100%;
+     
+  }
+  .carousel .carousel-caption h3{
+       text-transform: uppercase;
+       font-size: 2em;
+
+  }
+.school{
+	padding:0px 10px 0px 10px;
+	width: 100%;
+	text-align: center;
+	background: green;
+
+
+}
+.school h1{
+	transform:uppercase;
+	font-size: 1em;
+	color:white;
+
+
+}
+.card {
+	background: green;
+	}
+.icon{
+	font-size: 2em;
+	color: green;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: white;
+	text-align: center;
+	padding-top:6px;
+}
+.school:hover{
+	transform:scale(1.4); 
+}
+.events{
+	float:right;
+	margin-top: -150px;
+	
+}
+.events .card-body{
+	background: white;
+	color:green;
+}
+.events .card-header{
+	color: white;
+}
+.events .event-item{
+	border-bottom:1px dotted green;
+
+}
+.events .card-footer {
+     text-align: center;
+}
+.events .event-item h6{
+	color:rgb(0,0,0,.7);
+}
+.events .card{
+	box-shadow: 5px 5px 5px rgb(0,0,0,.5);
+}
+
+.departments .first .card p{
+	width: 100%;
+	max-height: 80px;
+	overflow: hidden;
+
+}
+.departments .first .card{
+	width: 100%;
+	margin-top: 10px;
+
+
+}
+.departments .first img{
+	max-height: 220px;
+}
+#department h1, .contact-us h1{
+	font-size: 2em;
+	font-family: palatino;
+	padding-left: 15px;
+	margin-top: 10px;
+	font-weight: 1000;
+	color: green;
+
+}
+.top-stories{
+	position: absolute;
+	width: 100%;
+	margin-top:450px; 
+    float:right;
+    margin-left:67%;
+    height: 400px !important;
+}
+.top-stories .card-body{
+	background: white;
+}
+#humanities img{
+	max-height: 220px;
+
+}
+#humanities p{
+	max-height: 50px;
+	overflow: hidden;
+}
+#counseling p{
+    max-height: 50px;
+    overflow: hidden;
+}
+footer{
+	background: black;
+}
+footer h4 {
+	color: white;
+}
+footer p,footer a{
+	color: #555;
+}
+footer a:hover{
+	text-decoration: none;
+}
+.footer-body{
+	border-bottom: 1px solid #999;
+}
+footer .copy{
+	text-align: center;
+	font-size: 0.8em;
+}
+footer .copy a{
+	font-size: 1em;
+	color:#811;
+}
+footer span{
+	margin-right: 5px;
+	color:white;
+}
+.clubs .card-header {
+	min-height: 200px;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+.clubs .card-body {
+	max-height: 200px;
+	overflow: hidden;
+}
+.clubs .card-header h3{
+	margin-top: 100px;
+	color: #ccc;
+	font-weight: 1000;
+	text-align: center;
+
+}
+.clubs-header h2{
+	font-family: palatino;
+	color: green;
+	border-bottom:3px solid green;
+	font-weight: 700;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+/*About Us*/
+.aboutus .card-body img{
+	width:100%;
+	height:400px; 
+}
+.aboutus .card-body p{
+	color:white;
+}
+.aboutus h1, .management h1, .staff h1, .fees h1, .awards h1, .tenders h1, .assignments h1{
+	text-align: center;
+	background: green;
+	width: 300px;
+	height: auto;
+	margin:auto;
+	margin-bottom: -10px;
+	border-radius:10px 10px 0px 0px;
+	margin-top:10px;
+	color: white;
+	font-family: times; 
+
+}
+.management .card-body img{
+	float:left;
+	
+
+
+}
+
+.management .mngt-body{
+	background: green;
+
+}
+.management .mngt-card .card{
+	background: white;
+}
+.management{
+	margin-top:20px; 
+
+}
+
+.management .card-body .name{
+	float:left;
+	display: block;
+	text-align: center;
+	font-style: italic;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: 600;
+
+}
+.staff{
+	margin-top: 20px;
+}
+.staff .card-body img{
+   max-height: 340px;
+}
+.staff .staff-body .card{
+	background: white;
+}
+.staff .staff-body h3{
+	text-align: center;
+}
+.parallax{
+	background: repeat-x;
+	width: 100%;
+	height: auto;
+}
+.parallax h1{
+	text-align: center;
+	color:white;
+	background: rgba(0,255,0,.3);
+	margin-top: 80px;
+	font-weight: 600;
+	width:400px;
+	margin:auto;
+	margin-top: 50px;
+}
+.subjects{
+	margin-top: 20px;
+
+}
+.subject-body .card{
+	background: white;
+}
+.subject-body .subjects-no{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border:2px solid green;
+	text-align: center;
+	font-size:4em;
+	margin:auto;
+	padding:5px;
+	padding-top: 4px;
+}
+.subject-body h1{
+	text-align: center;
+}
+.subjects-list h2{
+	text-align: center;
+}
+.subjects-list ul{
+	list-style: none;
+
+}
+/*Uniforms*/
+.uniforms .card-footer{
+  text-align: center;
+  color: white;
+  font-weight: 1000;
+  font-family: times;
+
+}
+.uniforms .card{
+	min-height: 400px !important;
+	max-height: 400px;
+}
+.uniforms .card-body{
+	min-height:100px;
+}
+.check  {
+	text-align: center;
+	width:20px;
+	height:20px;
+	border-radius: 50px;
+	color:white;
+	font-size: 1em;
+	background:green;
+	padding-top: 1.5px;
+	margin-right: 4px;
+}
+.fees-body .card{
+	background: white;
+}
+.fees-body .card h4{
+	font-size: 1.2em;
+	display: inline-block;
+	color:green;
+
+}
+.fees h1{
+	text-align: center;
+}
+.fees-body .term{
+	color:black;
+}
+.awards{
+	background-repeat: no-repeat;
+	background-size:100%;
+	background-position:center center;
+	 height:50%;
+}
+.awards .awards-body ul{
+	list-style: none;
+}
+.awards .row{
+	margin-left: 70%;
+	margin-top: 30px;
+
+}
+.awards h1{
+	background:transparent;
+	font-weight: 1000;
+}
+.awards .awards-body  ul li{
+	font-size: 1.5em;
+
+}
+.awards .check{
+   width: 30px;
+   height:30px;
+}
+.department-page ul li{
+	
+	list-style: none;
+}
+.department-page .card-body{
+	background:#fff;
+	color: green;
+
+}
+.department-page img{
+	max-width: 100px;
+	min-height: 100px;
+    float:left;
+
+}
+.department-page .row{
+	margin-top: 20px;
+
+}
+.department-page .card{
+	border:none;
+}
+.games .card-body img{
+	width: 100%;
+}
+.games .card-header {
+	text-align: center;
+}
+.hod {
+	text-align: center;
+}
+.hod img{
+	margin-left: 30%;
+	margin-top: 20px;
+}
+.hod .card{
+	background-color: white;
+	border:none;
+}
+.games .card-body{
+	border:none;
+}
+.games .card{
+	border:none;
+	}
+	.games img{
+		max-height: 220px;
+	}
+	.contact{
+		width: 100%;
+		height: 250px;
+
+	}
+	.contact h2{
+		text-align: center;
+	}
+	.form{
+		margin-top: 25px;
+		border:2px solid green;
+		width: 450px;
+		height: 250px;
+	}
+	.form .lenght{
+		width: 50%;
+	}
+	.contact .card-body{
+		background-size:100%;
+	    background-position:center center;
+	    height:50%;
+	    width: 100%;
+	    font-weight: 500;
+	    text-transform: lowercase;
+	    display: inline-block;
+	}
+	.contact .details{
+		float:right;
+		margin-top: -300px;
+	}
+	.events-page .card{
+		background: #f4f4f4;
+	}
+	.events-page .date{
+		margin: auto;
+		width:100px;
+		height: 100px;
+		background: green;
+		text-align: center;
+		padding-top: 7.5px;
+		font-weight: 1000;
+		font-size: 1.98em;
+		font-family: Times;
+		color:white;
+	}
+.events-page .event-datails{
+	margin: auto
+}
+.tenders h1{
+	margin-bottom: 0;
+}
+.assignments .assignments-values .card{
+	width: 100%;
+	background: white;
+}
+.assignments #submit{
+	margin-top: 32px;
+	width: 200px;
+}
+.uppercase{
+	text-transform: uppercase;
+}
+.contact-us{
+	margin-top: 20px;
+}
+.contact-us .contact-info{
+	color: white;
+	text-align: center;
+}
+.contact-us .contact-info h6{
+	color: #ccc;
+}
+.contact-us h1{
+	text-decoration: underline;
+}

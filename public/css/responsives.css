@@ -1,0 +1,235 @@
+
+@media screen and (max-width:768px) { 
+
+.nav-text h1 {
+	font-size: 2em;
+}
+
+.mainmenu {
+	width: 100%;
+}
+.mainmenu .navigation li a.nav-link {
+	font-size: 12px;
+}
+.top-stories{
+	margin-top: 670px;
+}
+.staff .staff-body h3{
+	font-size: 1.5em;
+}
+.staff .staff-body img{
+	min-height: 250px !important;
+}
+.subjects-list ul li{
+	font-size: 0.7em;
+}
+.check{
+		width: 15px;
+		height: 15px;
+		padding-top: 2px;
+		font-size: 0.9em;
+	}
+	.fees .fees-body h3{
+		font-size: 99% ;
+	}
+	.awards{
+		margin-top: -10px;
+	}
+.awards .awards-body ul li{
+	font-size: 1em;
+}
+.awards-body .check{
+	width: 20px;
+	height:20px;
+}
+}
+
+@media screen and (max-width:480px) {
+
+.navbar .container {
+	
+	height:150px;
+}
+ .navbar .navbar-nav {
+
+ 	width:100%;
+ 	height:50px;
+ 	margin:0px;
+
+ }
+ #phone {
+ 	margin-top: 20px;
+ 	margin-left:20%;
+ }
+
+ .social {
+	padding: 10px;
+	background:blue;
+	color: #fff;
+	font-size: 20px;
+	width:40px;
+	height:40px;
+	border-radius: 50%;
+	text-align: center;
+
+}
+
+.navbar .navbar-brand {
+	margin-left: 20%;
+}
+nav.mainmenu {
+	height:auto;
+}
+
+.mainmenu .navigation li a.nav-link {
+	font-size: 15px;
+}
+.mainmenu{
+	position: absolute;
+top:165px;
+}
+.white{
+	position: relative;
+	top:50px;
+}
+#carousel{
+	position:relative;
+	margin-top: 240px;
+}
+.carousel-inner img {
+	height:300px;
+}
+.carousel-caption h3{
+	text-transform: uppercase;
+	font-size: 1em;
+}
+.events{
+	margin-top: 3px;
+}
+#department
+{
+	 margin-top: 675px;
+}
+#department .col-xs-12{
+	width:100%;
+	text-align: center;
+}
+#department h1{
+	font-size: 1.5em;
+}
+.departments .card{
+	transform:scale(0.8);
+}
+.dep-all .gallery{
+	margin-top: 1150px;
+}
+.top-stories{
+	margin-top: 680px;
+	margin-left: 0;
+}
+.footer p{
+	font-size: 16px;
+}
+.clubs-header h2{
+	margin-left: 25px;
+	font-size: 1.5em;
+}
+/*
+	*
+	*
+	* About Us About Us About Us About Us About Us About Us About Us
+	*
+	*
+ */
+.about-us {
+	margin-top: 280px;
+}
+.about-us .card-body img{
+ 	height: 200px;
+ }
+  .about-us h1, .management h1, .staff h1, .fees h1{
+  	width: 220px;
+  	font-size: 2em;
+  }
+  .management h1{
+  	font-size: 1.8em;
+  }
+  .staff .staff-body h3{
+  	font-size: 1.5em;
+  }
+  /*
+	*
+	*
+	* Academics Academics Academics Academics Academics Academics Academics
+	*
+	*
+ */
+ .parallax{
+ 	margin-top: 250px;
+ }
+ .parallax h1{
+ 	font-size: 1.5em;
+ 	margin-left: 10px;
+ 	width: 280px;
+ }
+ .subjects .subjects-list ul{
+ 	padding: 0;
+ 	margin: 0;
+ 	
+ }
+ 
+.check{
+		width: 15px;
+		height: 15px;
+		padding-top: 2px;
+		font-size: 0.9em;
+	}
+.awards h1{
+		font-size: 30px;
+		padding-top: 10px;
+	}
+.awards {
+		background-size: 400px;
+		margin-top: -20px;
+	}
+.awards .row{
+ 	margin-left: 30%;
+ }
+ .awards .awards-body ul li{
+	font-size: 1em;
+	font-weight: 600;
+}
+.awards .check{
+	width: 20px;
+	height: 20px;
+}
+/* depart,ments   */
+.departmentpage {
+margin-top: 280px;
+}
+.tenders {
+	margin-top: 280px;
+}
+.assignments, .contactus{
+	margin-top: 280px;
+}
+.assignments h1 {
+	width:90%;
+}
+
+.assignments #submit {
+	margin-top: 3px;
+	margin-left:18%;
+}
+footer{
+	margin-top: 5px;
+	text-align: center;
+}
+footer h4{
+	font-size: 1.0em;
+}
+footer p{
+	font-size: 0.7em;
+}
+
+}

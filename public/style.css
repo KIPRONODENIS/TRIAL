@@ -1,0 +1,41 @@
+.Equalize{
+	width:250px;
+	height:250px;
+	border-radius: 50%;
+
+}
+
+.Equalize img {
+	max-width: 180px;
+	
+}
+
+
+form {
+	padding:30px;
+}
+
+
+.form-group input{
+	margin-top: 30px;
+}
+
+button {
+	margin-top:90px;
+	width:100%;
+	
+
+}
+
+#select{
+	margin-top:5px;
+}
+.thumb{
+
+height:200px;
+background: white;
+}
+
+.center {
+	text-align: center;
+}

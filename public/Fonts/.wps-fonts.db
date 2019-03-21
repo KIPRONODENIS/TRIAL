@@ -1,0 +1,37 @@
+{
+  "fonts": [
+    {
+      "confirmDate": 0,
+      "familyNames": [
+        "Lohit Bengali"
+      ],
+      "foundDate": 1526211464487,
+      "fullNames": [
+        "Lohit Bengali"
+      ],
+      "modifyDate": 1397631198000,
+      "path": "/storage/sdcard1/Fonts/font2.ttf",
+      "size": 139296,
+      "styles": [
+        0
+      ]
+    },
+    {
+      "confirmDate": 0,
+      "familyNames": [
+        "Roboto"
+      ],
+      "foundDate": 1526211464487,
+      "fullNames": [
+        "Roboto Italic"
+      ],
+      "modifyDate": 1397631198000,
+      "path": "/storage/sdcard1/Fonts/font.ttf",
+      "size": 82580,
+      "styles": [
+        2
+      ]
+    }
+  ],
+  "updateDate": 1526300418259
+}
