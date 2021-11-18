@@ -14,11 +14,6 @@ class adminacademicscontroller extends Controller
      		'term1'=>'required|max:5|min:3',
      		'term2'=>'required|max:5|min:3',
      		'term3'=>'required|max:5|min:3'
-     		
-     		
-
-
-
      	]);
        
 
@@ -31,6 +26,10 @@ class adminacademicscontroller extends Controller
       // $filename=$request->file->getclientOriginalName();
    // $request->file->storeAs('public',$filename);
       $fees=fees::find($id);
+      if(is_null($fees)) {
+         $fees=new fees();
+         $fees->id=$id;
+      }
     
    $fees->term1=$request->term1;
    $fees->term2=$request->term2;

@@ -23,7 +23,7 @@ class logincontroller extends Controller
    public function super() {
 
 
-   	return view('Admin.superAdmin');
+   	return view('Admin.SuperAdmin');
 
   }
 

@@ -10,6 +10,7 @@ class aboutuscontroller extends Controller
     public function index(){
     	$management=new management;
     	$management=$management->all();
+		
     	return view('pages.about',compact('management'));
     }
 }

@@ -15,7 +15,7 @@ class CreateTendersTable extends Migration
     {
         Schema::create('tenders', function (Blueprint $table) {
             $table->increments('id');
-
+             $table->string("tender_id");
              $table->string('Tender_name');
              $table->string('Tender_type');
              $table->string('Status');

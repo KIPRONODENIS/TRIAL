@@ -15,9 +15,9 @@ class CreateManagementsTable extends Migration
     {
         Schema::create('managements', function (Blueprint $table) {
             $table->increments('id');
-                $table->string('name');
+                $table->string('name')->nullable();
                 $table->string('file_name');
-                 $table->string('description');
+                 $table->text('description')->nullable();
             
             $table->timestamps();
         });

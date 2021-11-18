@@ -14,12 +14,8 @@ class managementcontroller extends Controller
     public function update(request $request){
 
     	$this->validate($request,[
-     		'management'=>'required|max:1500|min:1000',
+     		'management'=>'required|min:1000',
      		'file'=>'required'
-     		
-
-
-
      	]);
        
 
@@ -29,16 +25,22 @@ class managementcontroller extends Controller
      
       // $management=$request->management;
 
-       $filename=$request->file->getclientOriginalName();
+    $filename=$request->file->getclientOriginalName();
     $request->file->storeAs('public',$filename);
+    dd($filename);
       $management=management::find($id);
-       $management->file_name=$filename;
-    $management->description=$request->management;
+      $message="updated succesfully.";
+      if(is_null($management)) {
+          $management=new management();
+          $message="created succesfully.";
+      }
+        $management->file_name=$filename;
+        $management->description=$request->management;
        
 
         $management->save();
 
-              session()->flash('message',' updated succesfully.');
+              session()->flash('message',$message);
 
          return redirect('/smanagement');
 
@@ -67,6 +69,9 @@ class managementcontroller extends Controller
        $filename=$request->file->getclientOriginalName();
     $request->file->storeAs('public',$filename);
       $management=management::find($id);
+      if(is_null( $management)) {
+          $management=new management();
+      }
        $management->file_name=$filename;
     $management->description=$request->management;
        
@@ -158,10 +163,6 @@ public function studentleaders(request $request){
     	$this->validate($request,[
      		'history'=>'required|max:1800|min:500',
      		'file'=>'required'
-     		
-
-
-
      	]);
        
 
@@ -174,6 +175,9 @@ public function studentleaders(request $request){
        $filename=$request->file->getclientOriginalName();
     $request->file->storeAs('public',$filename);
       $management=management::find($id);
+      if(is_null($management)) {
+          $management=new management();
+      }
        $management->file_name=$filename;
     $management->description=$request->history;
        
@@ -191,13 +195,7 @@ public function studentleaders(request $request){
      public function staff(request $request){
 
       $this->validate($request,[
-       
-        
         'file'=>'required'
-        
-
-
-
       ]);
        
 
@@ -209,10 +207,12 @@ public function studentleaders(request $request){
 
        $filename=$request->file->getclientOriginalName();
     $request->file->storeAs('public',$filename);
-      $management=management::find($id);
-       $management->file_name=$filename;
     
-       
+      $management=management::find($id);
+      if(is_null($management)) {
+          $management=new management();   
+      }
+       $management->file_name=$filename;
 
         $management->save();
 
@@ -243,21 +243,18 @@ public function adminstaff(request $request){
      
       // $management=$request->management;
 
-       $filename=$request->file->getclientOriginalName();
-    $request->file->storeAs('public',$filename);
+      $filename=$request->file->getclientOriginalName();
+      $request->file->storeAs('public',$filename);
       $management=management::find($id);
+      if(is_null( $management)) {
+          $management=new management();
+      }
        $management->file_name=$filename;
-    
-       
-
         $management->save();
 
               session()->flash('message',' updated succesfully.');
 
          return redirect('/staff');
-
-
-
     }
     
 

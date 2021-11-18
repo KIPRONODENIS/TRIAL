@@ -18,7 +18,7 @@ route::get('about', 'aboutuscontroller@index');
 	
 
 
-route::get('department', 'departmentscontroller@index');
+route::get('department', 'departmentsController@index');
 	
 
 

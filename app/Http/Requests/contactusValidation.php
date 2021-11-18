@@ -24,7 +24,7 @@ class contactusValidation extends FormRequest
     public function rules()
     {
         return [
-       'name'=>'required|max:20',
+       'name'=>'required|max:40',
      'phone'=>'required|max:13',
      'subject'=>'required|max:15',
      'textarea'=>'required'

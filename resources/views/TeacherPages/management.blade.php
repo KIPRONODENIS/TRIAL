@@ -28,11 +28,12 @@
                     
                     <label for="Selectslide">select Section </label>
                     <select class="form-control" name="id">
-                    
+                      <option value="1">History </option>
                       <option value="2">Principal </option>
                       <option  value="3">Board of Governors  </option>
-                      <option value="5">P.T.A  </option>
                       <option value="4">Deputy principal  </option>
+                      <option value="5">P.T.A  </option>
+                  
                       
                     </select>
                   </div>
