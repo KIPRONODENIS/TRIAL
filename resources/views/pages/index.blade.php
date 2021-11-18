@@ -9,7 +9,7 @@ index
 
 @section('content')
 
-
+@if(isset($data))
 <div id="carousel" class="carousel slide" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -90,6 +90,7 @@ index
     
    
   </div>
+
   <a class="carousel-control-prev" href="#carousel" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </a>
@@ -97,6 +98,9 @@ index
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
+@else 
+<div>PLease UPload the images</div>
+@endif
 <div>
   <div class="card">
     <div class="card-body">

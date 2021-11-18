@@ -3,6 +3,7 @@
 namespace trial\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use trial\home;
 
 class adminhomecontroller extends Controller
@@ -34,15 +35,16 @@ class adminhomecontroller extends Controller
        'file'=>'required'
       ]);
 
-
        $slide=$request->slide;
       $captionHeading=$request->CaptionHeading;
        $description=$request->CaptionDescription;
-
-
-       $filename=$request->file->getclientOriginalName();
-    $request->file->storeAs($filename);
+      // $filename=$request->file->getclientOriginalName();
+       $filename=   $request->file->store('public');
+      $filename=explode("/",$filename)[1];
       $data=home::find($slide);
+      if(is_null($data)) {
+        $data=new home();
+      }
        $data->caption_heading=$captionHeading;
        $data->description=$description;
         $data->file_name=$filename;
@@ -54,7 +56,7 @@ class adminhomecontroller extends Controller
         session()->flash('message',' updated succesfully.');
  
 
- return redirect('/adminhome');
+ return redirect()->back();
 
 
     }

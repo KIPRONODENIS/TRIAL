@@ -23,7 +23,6 @@ class eventscontroller extends Controller
    		$home=new home;
     	$data=$home->all();
 
-
 $Ddata=[];
 
  $departments=departments::all();

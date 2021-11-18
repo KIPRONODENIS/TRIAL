@@ -11,7 +11,7 @@
 |
 */
 
-route::get('/','homecontroller@index');
+// route::get('/','homecontroller@index');
 	
 
 route::get('about', 'aboutuscontroller@index');
