@@ -25,33 +25,18 @@
 
                 	 <div class="form-group">
                 		
-                		<label for="selectdepartment">select Department </label>
-                		<select class="form-control" name="id">
-                			
-                			<option value="1">Mathematics </option>
-                			<option value="2">Languages   </option>
-                			<option value="3">Sciences</option>
-                			<option value="4">Humanities  </option>
-                			<option value="5">ICT   </option>
-                			<option value="6"> Guidance and Counceling </option>
-                      <option value="7">Boarding  </option>
-                      <option value="8">Examination  </option>
-                      <option value="9">games  </option>
-
-                			
-                		</select>
+                		<label for="selectdepartment">Department name</label>
+                    <input type="text" name="name" class="form-control" id="" placeholder="e.g Mathematics">
                 	</div>
                   
                   <div class="form-group">
                     <label for="exampleInputFile">Select image</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" name="file" id="exampleInputFile">
+                    <div >
+                      <div >
+                        <input type="file" class="" name="file">
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                       </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text" id="">Upload</span>
-                      </div>
+                   
                     </div>
                   </div>
                   <div class="form-group">

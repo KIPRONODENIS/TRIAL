@@ -194,120 +194,26 @@ index
   <div class="col-xs-12"><h1>DEPARTMENTS:</h1></div>
   
   <br>
-  <br>
-  <br>
-  <br>
- 
+
 </div>
 
 
 <div class="container departments">
   <div class="row first" id="first">
-    <div class="col-md-6 col-sm-6 col-xs-12">
+    @foreach($Ddata as $departmentItem)
+  <div class="col-md-6 col-sm-6 col-xs-12">
       <div class="card">
-    <img class="card-img-top" src="{{asset('storage/'.$Ddata['mathematics'])}}" alt="mathematis" style="width:100%;">
+    <img class="card-img-top" src="{{asset('storage/'.$departmentItem->file_name)}}" alt="mathematis" style="width:100%;">
     <div class="card-body">
-      <h4 class="card-title">Department of mathematics</h4>
-      <p class="card-text">{{$Ddata['mdescription']}}</p>
+      <h4 class="card-title">Department of {{$departmentItem->name}}</h4>
+      <p class="card-text">{{$departmentItem->description}}</p>
       <a href="department" class="btn btn-success">Read More</a>
     </div>
   </div>
-  
    </div>
-
-  <div class="col-md-6 col-sm-6 col-xs-12 lang " >
-      <div class="card">
-    <img class="card-img-top" src="{{asset('storage/'.$Ddata['languages'])}}" style="width:100%;">
-    <div class="card-body">
-      <h4 class="card-title">Department of Languages</h4>
-      <p class="card-text languages">{{$Ddata['ldescription']}}</p>
-      <a href="department" class="btn btn-success">Read More</a>
-    </div>
-  </div>
-    
-  </div>
-
+   @endforeach
 </div>
 
-<div class="row first second">
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="card" style="width:100%;">
-    <img class="card-img-top" src="{{asset('storage/'.$Ddata['science'])}}" style="width:100%;">
-    <div class="card-body">
-      <h4 class="card-title">Department of Sciences</h4>
-      <p class="card-text">{{$Ddata['sdescription']}}</p>
-      <a href="department" class="btn btn-success">Read More</a>
-    </div>
-  </div>
-  
-   </div>
-
-  <div class="col-md-4 col-sm-4 col-xs-12" id="humanities">
-      <div class="card">
-    <img class="card-img-top" src="{{asset('storage/'.$Ddata['humanities'])}}" alt="Humanities" style="width:100%;">
-    <div class="card-body">
-      <h4 class="card-title">Department of Humanities</h4>
-      <p class="card-text">{{$Ddata['hdescription']}}</p>
-      <a href="department" class="btn btn-success">Read More</a>
-    </div>
-  </div>
-    
-  </div>
-
-</div>
-<div class="row first third">
-<div class="   col-md-4 col-sm-4 col-xs-12 ">
-      <div class="card">
-    <img class="card-img-top" src="{{asset('storage/'.$Ddata['ict'])}}" alt="ICT" style="width:100%;">
-    <div class="card-body">
-      <h4 class="card-title">Department of ICT</h4>
-      <p class="card-text">{{$Ddata['idescription']}}</p>
-      <a href="department" class="btn btn-success">Read More</a>
-    </div>
-  </div>
-  
-   </div>
-
-  <div class="col-md-4 col-sm-4 col-xs-12" id="counseling">
-      <div class="card">
-    <img class="card-img-top" src="{{asset('storage/'.$Ddata['g&c'])}}" alt="Guiding and counseling" style="width:100%;">
-    <div class="card-body">
-      <h4 class="card-title">Department of Guiding and counseling</h4>
-      <p class="card-text">{{$Ddata['gdescription']}}</p>
-      <a href="department" class="btn btn-success">Read More</a>
-    </div>
-  
-    
-  </div>
-</div>
-</div>
-
-<div class="row first third">
-<div class="   col-md-4 col-sm-4 col-xs-12 ">
-      <div class="card">
-    <img class="card-img-top" src="{{asset('storage/'.$Ddata['boarding'])}}" alt="ICT" style="width:100%;">
-    <div class="card-body">
-      <h4 class="card-title">Boarding Department</h4>
-      <p class="card-text">{{$Ddata['bdescription']}}</p>
-      <a href="department" class="btn btn-success">Read More</a>
-    </div>
-  </div>
-  
-   </div>
-
-  <div class="col-md-4 col-sm-4 col-xs-12" id="counseling">
-      <div class="card">
-    <img class="card-img-top" src="{{asset('storage/'.$Ddata['examination'])}}" alt="Guiding and counseling" style="width:100%;">
-    <div class="card-body">
-      <h4 class="card-title">Examination Department</h4>
-      <p class="card-text">{{$Ddata['edescription']}}</p>
-      <a href="department" class="btn btn-success">Read More</a>
-    </div>
-  
-    
-  </div>
-</div>
-</div>
 </div>
 </div>
 @endif

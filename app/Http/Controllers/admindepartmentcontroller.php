@@ -10,27 +10,27 @@ class admindepartmentcontroller extends Controller
      public function index(Request $request)
     {
       $this->validate($request,[
+       'name'=>'required |min:3 ',
        'file'=>'required',
        'department'=>'required'
        
       ]);
 
 
-       $id=$request->id;
+       $name=$request->name;
      
-       $department=$request->department;
+       $description=$request->department;
        $filename=$request->file->getclientOriginalName();
-    $request->file->storeAs('public',$filename);
-      $data=departments::find($id);
-
-       $data->description=$department;
+        $request->file->storeAs('public',$filename);  
+        $data=new departments();
+        $data->description=$description;
         $data->file_name=$filename;
-
+        $data->name=$name;
         $data->save();
 
         
 
-        session()->flash('message',' updated succesfully.');
+        session()->flash('message',' Created succesfully.');
  
 
  return redirect('/tdepartment');
