@@ -10,16 +10,9 @@ class adminassignmentcontroller extends Controller
     public function index(request $request){
 
     	$this->validate($request,[
-     	
      		'file'=>'required'
-     		
-
-
-
      	]);
        
-
-
 
     	 $id=$request->form;
      
@@ -31,7 +24,7 @@ class adminassignmentcontroller extends Controller
 
        $assignments->file_subject=$request->subject;
 
-        $assignments->file_name=$filename;
+        $assignments->file_name="/storage/{$filename}" ;
 
         $assignments->form=$request->form;
    

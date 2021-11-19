@@ -24,47 +24,22 @@ class adminteachercontroller extends Controller
 
        $id=$request->id;
 
-       switch($id){
-
-       case '1':$department='Mathematics';break;
-
-       case '2':$department='Languages';break;
-
-       case '3':$department='Sciences';break;
-
-       case '4':$department='humanities';break;
-
-       case '5':$department='ICT';break;
-
-       case '6':$department='Guidance and counseling';break;
-
-       case '7':$department='Boarding';break;
-
-       case '8':$department='Examination';break;
-
-
-
-        }
       
        $teachers=$request->teachersname;
        
    
       $data= new teachers;
 
-
-       
-        $data->find($id);
-
-        $data->departments_id=$id;
-           $data->department_name=$department;
-              $data->teachers_name=$teachers;
+         $data->department_id=$id;
+         $data->department_name=\trial\departments::find($id)->name;
+         $data->teachers_name=$teachers;
 
 
         $data->save();
 
         
 
-        session()->flash('message',' updated succesfully.');
+        session()->flash('message',' created succesfully.');
  
 
  return redirect('/addteacher');

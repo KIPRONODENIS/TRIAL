@@ -46,7 +46,7 @@
                 			
                 		</label>
 
-                 <input type="text" name="term1"  class="form-control" id="fee">
+                 <input type="number" name="term1"  class="form-control" id="fee">
                  	
                  
                  </div>
@@ -55,7 +55,7 @@
                 			
                 		</label>
 
-                 <input type="text" name="term2"  class="form-control" id="fee">
+                 <input type="number" name="term2"  class="form-control" id="fee">
                  	
                  
                  </div>
@@ -64,7 +64,7 @@
                 			
                 		</label>
 
-                 <input type="text" name="term3"  class="form-control" id="fee">
+                 <input type="number" name="term3"  class="form-control" id="fee">
                  	
                  
                  </div>

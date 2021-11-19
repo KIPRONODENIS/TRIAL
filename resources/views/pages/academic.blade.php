@@ -75,7 +75,7 @@ academics
             <div class="item">
               <div class="card">
             
-                  <img class="img-responsive card-img-top"  src="{{asset('images/'.$uniformtype->file_name)}}">
+                  <img class="img-responsive card-img-top"  src="{{asset('storage/'.$uniformtype->file_name)}}">
               		
               	
               	<div class="card-body">

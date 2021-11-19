@@ -27,7 +27,6 @@ class managementcontroller extends Controller
 
     $filename=$request->file->getclientOriginalName();
     $request->file->storeAs('public',$filename);
-    dd($filename);
       $management=management::find($id);
       $message="updated succesfully.";
       if(is_null($management)) {
@@ -128,10 +127,6 @@ public function studentleaders(request $request){
     	$this->validate($request,[
      		'studentleaders'=>'required|max:1000|min:500',
      		'file'=>'required'
-     		
-
-
-
      	]);
        
 
@@ -144,6 +139,10 @@ public function studentleaders(request $request){
        $filename=$request->file->getclientOriginalName();
     $request->file->storeAs('public',$filename);
       $management=management::find($id);
+      if(is_null($management)) {
+        $management=new management();
+        $management->id = $id;
+      }
        $management->file_name=$filename;
     $management->description=$request->studentleaders;
        

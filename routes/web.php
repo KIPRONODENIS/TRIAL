@@ -108,7 +108,8 @@ route::get('tuniforms',function(){
 });
 
 route::get('addteacher',function(){
-	return view('TeacherPages.addTeacher');
+	$departments = \trial\departments::all();
+	return view('TeacherPages.addTeacher',compact('departments'));
 
 });
 

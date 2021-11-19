@@ -52,7 +52,7 @@ contact us
 		<div class="col-md-6 col-sm-6 col-xs-12 contact-info">
 			<div class="card">
 				<div class="card-header">
-					<h4>WARENG HIGH SCHOOL</h4>
+					<h4>chepterit HIGH SCHOOL</h4>
 					<h6>"Elimu Yajenga"</h6>
 				</div>
 				<div class="card-body">

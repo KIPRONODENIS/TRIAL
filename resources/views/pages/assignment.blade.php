@@ -51,7 +51,7 @@ assignments
 
 										<th scope="row">{{$download->id}}</th>
 										<td>{{$download->file_subject}}</td>
-										<td><a href="assignments/{{$download->file_name}}" download="{{$download->file_name}}" class="btn btn-success">download</a></td>
+										<td><a href="{{$download->file_name}}" download="{{$download->file_name}}" class="btn btn-success">download</a></td>
 									</tr>
 									@endforeach
 								</tbody>

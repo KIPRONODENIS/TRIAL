@@ -10,8 +10,8 @@ class admintendercontroller extends Controller
      public function index(request $request){
 
      	$this->validate($request,[
-     		'tendername'=>'required|max:30',
-     		'tenderid'=>'required|max:10',
+     		'tendername'=>'required|max:80',
+     		'tenderid'=>'required|max:30',
      		'tendertype'=>'required|max:25'
      		
      		

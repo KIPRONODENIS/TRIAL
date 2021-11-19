@@ -21,9 +21,9 @@ class adminacademicscontroller extends Controller
 
     	 $id=$request->id;
      
-      // $management=$request->management;
+   //    $management=$request->management;
 
-      // $filename=$request->file->getclientOriginalName();
+   //    $filename=$request->file->getclientOriginalName();
    // $request->file->storeAs('public',$filename);
       $fees=fees::find($id);
       if(is_null($fees)) {
@@ -45,38 +45,31 @@ class adminacademicscontroller extends Controller
 
     }
      public function uniforms(request $request){
-
     	$this->validate($request,[
      		'description'=>'required',
-     		'file'=>'required'
-     		
-
-
-
+     		'file'=>'required',
+         'name' =>'required'
      	]);
        
-
-
-
-    	 $id=$request->id;
+    	$name=$request->name;
      
       // $management=$request->management;
 
-       $filename=$request->file->getclientOriginalName();
-    $request->file->storeAs('public',$filename);
-      $uniforms=uniforms::find($id);
-       $uniforms->file_name=$filename;
-    $uniforms->description=$request->description;
+      $filename=$request->file->getclientOriginalName();
+      $request->file->storeAs('public',$filename);
+
+      $uniforms=new uniforms();
+      $uniforms->name=$name;
+
+      $uniforms->file_name=$filename;
+      $uniforms->description=$request->description;
        
 
-        $uniforms->save();
+      $uniforms->save();
 
-              session()->flash('message',' updated succesfully.');
+      session()->flash('message',' Created Succesfully.');
 
-         return redirect('/suniforms');
-
-
-
+      return redirect('/suniforms');
     }
 
 

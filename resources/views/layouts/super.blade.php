@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>wareng high| Dashboard</title>
+  <title>chepterit high| Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -70,7 +70,7 @@
     <a href="index3.html" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">Wareng High School</span>
+      <span class="brand-text font-weight-light">chepterit High School</span>
     </a>
 
     <!-- Sidebar -->
@@ -91,6 +91,17 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
          
+           <li class="nav-item has-treeview menu-open">
+            <a href="/superadmin" class="nav-link active">
+              <i class="nav-icon fa fa-dashboard"></i>
+              <p>
+               Home
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            
+          </li>
+
             <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-table"></i>
@@ -126,7 +137,16 @@
               </p>
             </a>
           </li>
-          
+            <li class="nav-item">
+            <a href="history" class="nav-link">
+              <i class="nav-icon fa fa-th"></i>
+              <p>
+                History
+             
+              </p>
+            </a>
+          </li>
+
           <li class="nav-item has-treeview">
             <a href="smanagement" class="nav-link">
               <i class="nav-icon fa fa-tree"></i>
@@ -156,6 +176,109 @@
               </p>
             </a>
           </li>
+
+         
+          <li class="nav-item has-treeview ">
+            <a href="home" class="nav-link">
+              <i class="nav-icon fa fa-dashboard"></i>
+              <p>
+                Carousel
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="studentleaders" class="nav-link">
+              <i class="nav-icon fa fa-pie-chart"></i>
+              <p>
+                Student leaders
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+           
+          </li>
+  
+           <li class="nav-item has-treeview">
+            <a href="agallery" class="nav-link">
+              <i class="nav-icon fa fa-picture-o"></i>
+              <p>
+            Gallery
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+           
+          </li>
+           
+          <li class="nav-item has-treeview">
+            <a href="clubs" class="nav-link">
+              <i class="nav-icon fa fa-edit"></i>
+              <p>
+                Clubs Blog
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+  
+           <li class="nav-item has-treeview ">
+            <a href="tdepartment" class="nav-link ">
+              <i class="nav-icon fa fa-dashboard"></i>
+              <p>
+                Departments
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-table"></i>
+              <p>
+                Teachers
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="addteacher" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Add Teacher</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="removeteacher" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Remove Teacher</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="tstaff" class="nav-link">
+              <i class="nav-icon fa fa-th"></i>
+              <p>
+
+                Staff Images
+             
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="tassignments" class="nav-link">
+              <i class="nav-icon fa fa-edit"></i>
+              <p>
+                Assignments
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+            
+          </li>
+           
+         
+        
+         
   
           <li class="nav-header">Messages</li>
 
@@ -206,7 +329,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2018 <a href="http://adminlte.io">Wareng high school</a>.</strong>
+    <strong>Copyright &copy; 2018 <a href="http://adminlte.io">chepterit high school</a>.</strong>
     All rights reserved.
     
 

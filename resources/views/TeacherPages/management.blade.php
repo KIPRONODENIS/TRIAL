@@ -28,7 +28,7 @@
                     
                     <label for="Selectslide">select Section </label>
                     <select class="form-control" name="id">
-                      <option value="1">History </option>
+                    
                       <option value="2">Principal </option>
                       <option  value="3">Board of Governors  </option>
                       <option value="4">Deputy principal  </option>
@@ -40,14 +40,12 @@
                   
                   <div class="form-group">
                     <label for="exampleInputFile">Select image</label>
-                    <div class="input-group">
+                    <div >
                       <div class="custom-file">
-                        <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        <input type="file" name="file" >
+                        <label class="custom-file-label" >Choose file</label>
                       </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text" id="">Upload</span>
-                      </div>
+                   
                     </div>
                   </div>
                   <div class="form-group">

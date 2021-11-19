@@ -9,7 +9,7 @@ index
 
 @section('content')
 
-@if(isset($data))
+@if(count($data)>0)
 <div id="carousel" class="carousel slide" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -187,7 +187,7 @@ index
 </div>
   
 </div>
-</div>
+
  @if($Ddata)
 <div class="dep-all">
 <div class="row" id="department" >

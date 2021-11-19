@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Wareng high | Dashboard</title>
+  <title>chepterit high | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -80,7 +80,7 @@
     <a href="index3.html" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">Wareng High School</span>
+      <span class="brand-text font-weight-light">chepterit High School</span>
     </a>
 
     <!-- Sidebar -->
@@ -224,7 +224,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2018 <a href="http://adminlte.io">Wareng high school</a>.</strong>
+    <strong>Copyright &copy; 2018 <a href="http://adminlte.io">chepterit high school</a>.</strong>
     All rights reserved.
     
 

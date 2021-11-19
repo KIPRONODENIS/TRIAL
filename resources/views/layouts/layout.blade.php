@@ -86,7 +86,7 @@
 				<img style="max-width:150px" src="images/logoGreen.jpg" class="img-responsive">
 			</a>
 			<div class="nav-text">
-			<h1>WARENG HIGH SCHOOL</h1>
+			<h1>chepterit HIGH SCHOOL</h1>
 			<h6>"Elimu Ya Jenga."</h6>
 
           </div>
@@ -128,7 +128,7 @@
 			<h4>CONTACTS</h4>
 			<p>Tel:020-647-7376 </p>
 			<p>Phone: +254-799-0124</p>
-			<p>email:info@warenghigh.com</p>
+			<p>email:info@chepterithigh.com</p>
 		</div>
 		<div class="col-md-4 col-sm-4 col-xs-12">
 			
@@ -147,7 +147,7 @@
 		</div>
 	</div>
 	<div class="row copy">
-		<p>&copy;Copyright 2018 wareng high school by <a href="#" class="uppercase">Bora techlife CO.</a></p>
+		<p>&copy;Copyright 2018 chepterit high school by <a href="#" class="uppercase">Bora techlife CO.</a></p>
 	</div>
 </div>
 </footer>

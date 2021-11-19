@@ -11,7 +11,7 @@ class galleryviewController extends Controller
 
 $data=gallery::all();
 
-	return view('Pages.gallery',compact('data'));
+	return view('pages.gallery',compact('data'));
 
 }
 

@@ -14,7 +14,7 @@ Gallery
  	<h1 class="uppercase">Gallery</h1>
 
 
-<div class="card" style="background:url('images/page-bg-1.jpg')">
+<div class="card" style="background:url('storage/page-bg-1.jpg')">
 
   <div class="card-header"><h3>FORM ONE</h3></div>
          <div class="row">
@@ -26,7 +26,7 @@ Gallery
 
     <div class="card">
 
-     <img class="card-img-top" src="{{asset('images/'.$data['file_name'])}}" >
+     <img class="card-img-top" src="{{asset('storage/'.$data['file_name'])}}" >
 
      <div class="card-footer">
 1{{$data->class}}
@@ -43,7 +43,7 @@ Gallery
 
     <div class="card">
 
-     <img class="card-img-top" src="{{asset('images/'.$data['file_name'])}}" >
+     <img class="card-img-top" src="{{asset('storage/'.$data['file_name'])}}" >
 
      <div class="card-footer">
 2{{$data->class}}
@@ -60,7 +60,7 @@ Gallery
 
     <div class="card">
 
-     <img class="card-img-top" src="{{asset('images/'.$data['file_name'])}}" >
+     <img class="card-img-top" src="{{asset('storage/'.$data['file_name'])}}" >
 
      <div class="card-footer">
 3{{$data->class}}
@@ -76,7 +76,7 @@ Gallery
 
     <div class="card">
 
-     <img class="card-img-top" src="{{asset('images/'.$data['file_name'])}}" >
+     <img class="card-img-top" src="{{asset('storage/'.$data['file_name'])}}" >
 
      <div class="card-footer">
 4{{$data->class}}

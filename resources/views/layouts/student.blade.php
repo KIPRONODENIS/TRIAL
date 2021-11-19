@@ -76,7 +76,7 @@
     <a href="index3.html" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">Wareng High School</span>
+      <span class="brand-text font-weight-light">chepterit High School</span>
     </a>
 
     <!-- Sidebar -->
@@ -96,11 +96,21 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="home" class="nav-link active">
+            <li class="nav-item has-treeview menu-open">
+            <a href="/admin" class="nav-link active">
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
-                Home
+               Home
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            
+          </li>
+          <li class="nav-item has-treeview ">
+            <a href="home" class="nav-link">
+              <i class="nav-icon fa fa-dashboard"></i>
+              <p>
+                Carousel
                 <i class="right fa fa-angle-left"></i>
               </p>
             </a>
@@ -201,7 +211,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2018 <a href="http://adminlte.io">Wareng high school</a>.</strong>
+    <strong>Copyright &copy; 2018 <a href="http://adminlte.io">chepterit high school</a>.</strong>
     All rights reserved.
     
 

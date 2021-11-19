@@ -23,32 +23,17 @@
   {{csrf_field()}}
                 <div class="card-body">
                  <div class="form-group">
-                		
-                		<label for="selecttype">Select uniform type </label>
-                		<select class="form-control" name="id">
-                			
-                			<option value="1">School Tie </option>
-                			<option value="2">School shoes </option>
-                			<option value="3">School sweater </option>
-                			<option value="4">School shirt </option>
-                			<option value="5">School Blazer </option>
-                			<option value="6">Games kit </option>
-                			<option value="7">School skirt </option>
-                			<option value="8">School Socks </option>
-                			
-                		</select>
+                		<label for="type">Select uniform type </label>
+                		<input type="text" class="form-control" name="name"  id="type"/>
                 	</div>
                 	
                   
                   <div class="form-group">
                     <label for="exampleInputFile">Select image</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
+                    <div class="form-group">
+                      <div >
+                        <input type="file" name="file"  id="exampleInputFile">
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text" id="">Upload</span>
                       </div>
                     </div>
                   </div>

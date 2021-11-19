@@ -31,22 +31,18 @@
                 <h1 align="center">NEW TEACHER</h1>
 
                 <div class="form-group">
-                    
+                    @if(isset($departments ) && count($departments )> 0 )
                     <label for="Selectslide">Select Department </label>
                    <select class="form-control" name="id">
-                			
-                			<option value="1">Mathematics </option>
-                			<option value="2">Languages   </option>
-                			<option value="3">Sciences</option>
-                			<option value="4">Humanities  </option>
-                			<option value="5"> ICT  </option>
-                			<option value="6"> Guidance and Counceling </option>
-                      <option value="7">Boarding </option>
-                      <option value="8">Examination  </option>
-                      <option value="9">games  </option>
-
+                			@foreach ($departments as $department )
+                          <option value="{{$department->id}}">{{$department->name}}</option>
+                      @endforeach
+       
                 			
                 		</select>
+                    @else
+                    <p class="badge badge-danger">No departments created.PLease create one here to proceed</p>
+                    @endif
                   </div>
 
                    <div class="form-group">
