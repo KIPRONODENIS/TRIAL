@@ -10,9 +10,13 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 	<style type="text/css">
 	@media screen and (max-width: 480px){
 		.gallery{
@@ -59,8 +63,8 @@
 	
 	
 </head>
-<body>
-	<nav class="navbar navbar-expand-md navbar-light bg-success">
+<body class="bg-body">
+	<nav class="navbar navbar-expand-md navbar-light bg-green shadow-md">
 		<div class="container">
 			
 			<ul class="nav navbar-nav">
@@ -70,42 +74,38 @@
 				
 				</ul>
 				<div class="phone">
-					<span class="fa fa-phone social"></span>+254-722-397-744</a>
+					<span class="fa fa-phone social"></span>
+					<span class="text-white">+254-722-397-744</span>
 				</div>
 				<ul class="nav navbar-nav navbar-right login">
-				<li class="active"><a class="nav-link" href="login">Login</a></li>
-				<li><a class="nav-link" href="#">Signup</a></li>
+				<li ><a class="nav-link" href="login">Staff Portal</a></li>
+				<li><a class="nav-link" href="#">Alumni</a></li>
 			
 			</ul>
 		</div>
 	</nav>
 	
 	<nav class="navbar navbar-expand-md navbar-light bg-light bg-white logo">
-		<div class="container">
+		<div class="container d-flex justify-content-center align-content-center">
 			<a class="navbar-brand">
-				<img style="max-width:150px" src="images/logoGreen.jpg" class="img-responsive">
+				<img style="max-width:150px" src="/images/logo2.PNG" class="img-responsive">
 			</a>
-			<div class="nav-text">
-			<h1>chepterit HIGH SCHOOL</h1>
-			<h6>"Elimu Ya Jenga."</h6>
+			<div class="nav-text text-green">
+			<h1 class="text-uppercase">ST. JOSEPH'S chepterit GIRLS</h1>
+			<h6 class="text-uppercase">"In God We Excel."</h6>
 
           </div>
 
-          <div class=" btn btn-success search">
-
-
-          	<span class="fa fa-search  search-icon"></span>
-          </div>
       </div>
 	</nav>
-	<nav class="navbar navbar-expand-md navbar-light bg-success sticky-top main-menu ">
+	<nav class="navbar navbar-expand-md navbar-light bg-green sticky-top main-menu ">
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#main-menu">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="main-menu">
 		<div class="container">
 			<ul class="navbar-nav navigation">
-				<li nav-item class="active"><a class="nav-link" href="/">HOME</a></li>
+				<li nav-item><a class="nav-link" href="/">HOME</a></li>
 				<li nav-item><a class="nav-link" href="about">ABOUT US</a></li>
 				<li nav-item><a class="nav-link" href="academic">ACADEMICS</a></li>
 				<li nav-item><a class="nav-link" href="department">DEPARTMENTS</a></li>
@@ -146,10 +146,11 @@
 			
 		</div>
 	</div>
-	<div class="row copy">
-		<p>&copy;Copyright 2018 chepterit high school by <a href="#" class="uppercase">Bora techlife CO.</a></p>
-	</div>
+
 </div>
+	<div class="row border-top border-gray d-flex justify-content-center align-items-center copy">
+		<p>&copy;Copyright 2021 st.chepterit high school by <a href="#" class="uppercase">Bora techlife CO.</a></p>
+	</div>
 </footer>
 
 

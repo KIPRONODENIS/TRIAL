@@ -102,9 +102,15 @@ index
 <div>PLease UPload the images</div>
 @endif
 <div>
-  <div class="card">
+  <div class=" bg-white">
+  @php
+$class="w-100";
+if(isset($events) && count($events)>0) {
+  $class="w-75";
+}
+  @endphp
     <div class="card-body">
-      <div class="row">
+      <div class="row {{$class}} d-flex justify-content-between align-items-center bg-white">
         <div class="col-md-2 col-sm-2 col-xs-12 ">
           <div class="school">
             <a href="about"><span class="fa fa-book icon"></span></a><h1>OUR SCHOOL</h1>
@@ -125,16 +131,22 @@ index
             <span class="fa fa-picture-o icon"></span><h1>GALLERY</h1>
           </div>
         </div>
-        <div class="col-md-4"></div>
+     
+       <div class="col-md-2 col-sm-2 col-xs-12 ">
+          <div class="school">
+            <span class="fa fa-picture-o icon"></span><h1>ALUMNI</h1>
+          </div>
+        </div>
       </div>
       
     </div>
   </div>
   
 </div>
-<div class="col-md-4 col-sm-4 col-xs-12 events" id="events">
+@if (isset($events) && count($events)>0)
+    <div class="col-md-3 col-sm-4 col-xs-12 events" id="events">
   <div class="card">
-    <div class=" card-header">
+    <div class=" card-header bg-green">
       <h3>Upcoming Events</h3>
     </div>
     <div class="card-body">
@@ -154,12 +166,14 @@ index
 
     </div>
     <div class="card-footer">
-      <a  class="btn btn-success" href="#">SEE MORE EVENTS</a>
+      <a  class="btn  bg-green text-white" href="#">SEE MORE EVENTS</a>
       
     </div>
   </div>
   
 </div>
+@endif
+@if(isset($recents) && count($recents)>0)
 <div class="">
   <div class="col-md-4 col-sm-4 col-xs-12 top-stories">
   <div class="card"  style="margin-top: 525px;">
@@ -178,8 +192,8 @@ index
         @endforeach
 
           </div>
-    <div class="card-footer" style="background:green;">
-      <a  class="btn btn-success" href="#">READ MORE</a>
+    <div class="card-footer " >
+      <a  class="btn  bg-green text-white" href="#">READ MORE</a>
       
     </div>
   
@@ -187,27 +201,30 @@ index
 </div>
   
 </div>
+@endif
+
 
  @if($Ddata)
-<div class="dep-all">
+<div class="dep-all px-5">
 <div class="row" id="department" >
-  <div class="col-xs-12"><h1>DEPARTMENTS:</h1></div>
+  <div class="col-xs-12 col-md-12 text-center d-flex justify-content-center ali">
+  <h1 class="py-4 text-black">DEPARTMENTS</h1>
+  </div>
   
-  <br>
+ 
 
 </div>
 
-
-<div class="container departments">
+<div class="departments container">
   <div class="row first" id="first">
     @foreach($Ddata as $departmentItem)
   <div class="col-md-6 col-sm-6 col-xs-12">
       <div class="card">
     <img class="card-img-top" src="{{asset('storage/'.$departmentItem->file_name)}}" alt="mathematis" style="width:100%;">
     <div class="card-body">
-      <h4 class="card-title">Department of {{$departmentItem->name}}</h4>
+      <h4 class="card-title">{{$departmentItem->name}}</h4>
       <p class="card-text">{{$departmentItem->description}}</p>
-      <a href="department" class="btn btn-success">Read More</a>
+      <a href="department" class="btn bg-green text-white">Read More</a>
     </div>
   </div>
    </div>
@@ -217,9 +234,11 @@ index
 </div>
 </div>
 @endif
-<div class="row clubs-header">
+<div class="row clubs-header d-flex justify-content-center align-items-center w-100 text-center">
   
-  <h2>CLUBS AND SOCIETIES:</h2>
+  <div class="col-xs-12 col-md-12 text-center d-flex justify-content-center ali">
+  <h1 class="py-4">CLUBS AND SOCIETIES:</h1>
+  </div>
 </div>
 <div class="row ">
   <div class="container" >
@@ -235,7 +254,7 @@ index
                   <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-success">Read more</a>
+                  <a href="#" class="btn  bg-green text-white">Read more</a>
                 </div>
               </div>
             </div>
@@ -249,7 +268,7 @@ index
                   <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-success">Read more</a>
+                  <a href="#" class="btn  bg-green text-white">Read more</a>
                 </div>
               </div>
             </div>
@@ -263,7 +282,7 @@ index
                   <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-success">Read more</a>
+                  <a href="#" class="btn  bg-green text-white">Read more</a>
                 </div>
               </div>
             </div>
@@ -277,7 +296,7 @@ index
                   <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-success">Read more</a>
+                  <a href="#" class="btn  bg-green text-white">Read more</a>
                 </div>
               </div>
             </div>
@@ -291,7 +310,7 @@ index
                   <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-success">Read more</a>
+                  <a href="#" class="btn  bg-green text-white">Read more</a>
                 </div>
               </div>
             </div>
@@ -305,7 +324,7 @@ index
                   <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-success">Read more</a>
+                  <a href="#" class="btn  bg-green text-white">Read more</a>
                 </div>
               </div>
             </div>
@@ -319,7 +338,7 @@ index
                   <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-success">Read more</a>
+                  <a href="#" class="btn  bg-green text-white">Read more</a>
                 </div>
               </div>
             </div>
@@ -333,7 +352,7 @@ index
                   <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-success">Read more</a>
+                  <a href="#" class="btn  bg-green text-white">Read more</a>
                 </div>
               </div>
             </div>
@@ -347,7 +366,7 @@ index
                   <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-success">Read more</a>
+                  <a href="#" class="btn  bg-green text-white">Read more</a>
                 </div>
               </div>
             </div>
@@ -361,7 +380,7 @@ index
                   <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-success">Read more</a>
+                  <a href="#" class="btn  bg-green text-white">Read more</a>
                 </div>
               </div>
             </div>
@@ -375,7 +394,7 @@ index
                   <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-success">Read more</a>
+                  <a href="#" class="btn  bg-green text-white">Read more</a>
                 </div>
               </div>
             </div>
@@ -389,12 +408,215 @@ index
                   <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
                 </div>
                 <div class="card-footer">
-                  <a href="#" Lclass="btn btn-success">Read more</a>
+                  <a href="#" class="btn  bg-green text-white">Read more</a>
                 </div>
               </div>
             </div>
           </div>
 </div>
+
+</div>
+
+
+<div class=" w-100">
+<div class="testimonials-wrap container">
+	<div class="">
+        <div class="heading-section">
+            <span class="sub-heading text-green">Alumni</span>
+            <h2>Alumni Stories & Feedback</h2>
+        </div>
+        <div class="carousel-testimonial owl-carousel">
+            <div class="item">
+                <div class="testimonial-box d-flex">
+                    <div class="user-img" style="background-image: url(https://randomuser.me/api/portraits/men/82.jpg)">
+                    </div>
+                    <div class="text pl-4">
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p class="name">Mark Huff</p>
+                        <span class="position">Businesswoman</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-box d-flex">
+                    <div class="user-img" style="background-image: url(https://randomuser.me/api/portraits/men/83.jpg)">
+                    </div>
+                    <div class="text pl-4">
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p class="name">Rodel Golez</p>
+                        <span class="position">Businesswoman</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-box d-flex">
+                    <div class="user-img" style="background-image: url(https://randomuser.me/api/portraits/men/84.jpg)">
+                    </div>
+                    <div class="text pl-4">
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p class="name">Ken Bosh</p>
+                        <span class="position">Businesswoman</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-box d-flex">
+                    <div class="user-img" style="background-image: url(https://randomuser.me/api/portraits/men/85.jpg)">
+                    </div>
+                    <div class="text pl-4">
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p class="name">Racky Henderson</p>
+                        <span class="position">Father</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-box d-flex">
+                    <div class="user-img" style="background-image: url(https://randomuser.me/api/portraits/men/86.jpg)">
+                    </div>
+                    <div class="text pl-4">
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p class="name">Henry Dee</p>
+                        <span class="position">Businesswoman</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-box d-flex">
+                    <div class="user-img" style="background-image: url(https://randomuser.me/api/portraits/men/87.jpg)">
+                    </div>
+                    <div class="text pl-4">
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p class="name">Mark Huff</p>
+                        <span class="position">Businesswoman</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-box d-flex">
+                    <div class="user-img" style="background-image: url(https://randomuser.me/api/portraits/men/88.jpg)">
+                    </div>
+                    <div class="text pl-4">
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p class="name">Rodel Golez</p>
+                        <span class="position">Businesswoman</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-box d-flex">
+                    <div class="user-img" style="background-image: url(https://randomuser.me/api/portraits/men/89.jpg)">
+                    </div>
+                    <div class="text pl-4">
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p class="name">Ken Bosh</p>
+                        <span class="position">Businesswoman</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-box d-flex">
+                    <div class="user-img" style="background-image: url(https://randomuser.me/api/portraits/men/90.jpg)">
+                    </div>
+                    <div class="text pl-4">
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p class="name">Racky Henderson</p>
+                        <span class="position">Father</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-box d-flex">
+                    <div class="user-img" style="background-image: url(https://randomuser.me/api/portraits/men/91.jpg)">
+                    </div>
+                    <div class="text pl-4">
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p class="name">Henry Dee</p>
+                        <span class="position">Businesswoman</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-box d-flex">
+                    <div class="user-img" style="background-image: url(https://randomuser.me/api/portraits/men/92.jpg)">
+                    </div>
+                    <div class="text pl-4">
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p class="name">Mark Huff</p>
+                        <span class="position">Businesswoman</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+    <div class="cta text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h2> Become Part of  Alumni Community & Projects?</h2>
+                    <p>share your success story with us and inspire others</p>
+                </div>
+                <div class="col-sm-3 text-left text-sm-right">
+                    <a href="https://www.totoprayogo.com" target="_blank" class="btn btn-lg btn-outline-light">Register  Now</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-info contact4 overflow-hiddedn position-relative">
+  <!-- Row  -->
+  <div class="row no-gutters">
+    <div class="container">
+      <div class="col-lg-6 contact-box mb-4 mb-md-0">
+        <div class="">
+          <h1 class="title font-weight-light text-white mt-2">Contact Us</h1>
+          <form class="mt-3">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group mt-2">
+                  <input class="form-control text-white" type="text" placeholder="name">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group mt-2">
+                  <input class="form-control text-white" type="email" placeholder="email address">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group mt-2">
+                  <textarea class="form-control text-white" rows="3" placeholder="message"></textarea>
+                </div>
+              </div>
+              <div class="col-lg-12 d-flex align-items-center mt-2">
+                <button type="submit" class="btn bg-white text-inverse px-3 py-2"><span> Submit</span></button>
+                <span class="ml-auto text-white align-self-center"><i class="fa fa-phone mr-2"></i>251 546 9442</span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 right-image p-r-0">
+
+
+      <iframe class="h-100 rounded-xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.784555092334!2d35.13040691473371!3d0.23571996420729785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178060b186b52b23%3A0x3076e8947a1f3819!2sSt%20Joseph%20Chepterit%20Girls%20High%20School!5e0!3m2!1sen!2ske!4v1637570587494!5m2!1sen!2ske"
+        width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen data-aos="fade-left" data-aos-duration="3000"></iframe>
+    </div>
+  </div>
 </div>
 
 @endsection
@@ -404,7 +626,7 @@ index
 
 
 <script type="text/javascript">
-  var owl = $('.owl-carousel');
+  var owl = $('.clubs');
 owl.owlCarousel({
     loop:true,
     margin:10,
@@ -435,6 +657,30 @@ $('.play').on('click',function(){
 })
 $('.stop').on('click',function(){
     owl.trigger('stop.owl.autoplay')
+})
+
+
+$('.carousel-testimonial').owlCarousel({
+    loop:true,
+    margin:0,
+    items:3,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:2,
+            nav:false
+        },
+        1000:{
+            items:2,
+            nav:true,
+            loop:false
+        },
+    
+    }
 })
 </script>
 @endsection

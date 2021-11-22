@@ -94,8 +94,8 @@ border-bottom:4px solid blue;
 	border-radius: 50%;
 	background: white;
 }
-.school:hover{
-	transform:scale(1.4);
+.school:hover h1{
+	opacity: .8;
 }
 .events{
 	float: right;
@@ -124,10 +124,10 @@ border-bottom:4px solid blue;
 }
 #department h1,.contactus h1{
 	font-size: 2em;
-	font-family: palatino;
+	/* font-family: palatino; */
 	padding-left: 15px;
 	margin-top: 10px;
-	font-weight: 1000;
+	font-weight: 500;
 	color: rgba(0,0,200,1);
 }
 .departments .first .card p{
@@ -479,4 +479,7 @@ color:white;
 
 .contactus .contact-info h6 {
 	color:#999;
+}
+.bg-green {
+	background:rgb(29,63,31) !; 
 }
