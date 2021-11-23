@@ -156,7 +156,7 @@
           <span class="badge badge-danger navbar-badge">{{session('count')}}</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-
+@if(isset(session('data')))
           @foreach(session('data') as $data)
 
           <a href="#" class="dropdown-item">
@@ -192,7 +192,7 @@
           
          @endforeach
 
-
+@endif
          
            
             <!-- Message End -->
