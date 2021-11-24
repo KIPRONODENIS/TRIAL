@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,52 +15,37 @@
 |
 */
 
-// route::get('/','homecontroller@index');
-	
+// Route::get('/', function () {
+//     return Inertia::render('Welcome', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+// });
+
 
 route::get('about', 'aboutuscontroller@index');
-	
-
-
 route::get('department', 'departmentsController@index');
-	
-
-
 route::get('academic', 'academicscontroller@index');
-	
-
-
 route::get('tender', 'tenderscontroller@index');
-
-
 route::get('contactus', 'contactuscontroller@index')->name('contactus');
-	route::post('contactus','contactuscontroller@store');
-
-
+route::post('contactus','contactuscontroller@store');
 route::get('/', 'eventscontroller@index');
-
-
-
-
 route::get('assignment', 'assignmentcontroller@download');
+route::get('gallery','galleryviewController@index');
 
+Route::group(['middleware' =>'auth'], function() {
 route::post('assign','assignmentcontroller@assign');
 route::get('adminhome','adminhomecontroller@index');
 route::post('adminhome','adminhomecontroller@update');
-
 route::get('admin','logincontroller@admin');
-
-
 route::get('teacher','logincontroller@teacher');
-
-
 route::get('superadmin','logincontroller@super');
-
 route::get('home',function(){
 	return view('AdminPages.home');
 
 });
-
 route::get('history',function(){
 	return view('AdminPages.history');
 
@@ -129,104 +118,74 @@ route::get('stenders',function(){
 
 });
 route::resource('dtenders','deletetendercontroller');
-
-
-
-
 route::get('suniforms',function(){
 	return view('superPages.uniforms');
 
 });
 
 
-route::get('gallery','galleryviewController@index');
-
-
-
-route::get('agallery',function(){
-	return view('AdminPages.gallery');
-
-});
-
-route::post('agallery','gallerycontroller@index');
-
-
-route::get('messages','chatscontroller@index');
-route::post('messages','chatscontroller@users');
-
-route::post('reply','chatscontroller@reply');
-
-route::get('sevents','admineventscontroller@super');
-route::post('sevents','admineventscontroller@update');
-
-route::get('tevents','admineventscontroller@teacher');
-route::post('tevents','admineventscontroller@update');
-
-
-route::get('smanagement','managementcontroller@super');
-route::post('smanagement','managementcontroller@update');
-
-
-route::post('tmanagement','managementcontroller@teacher');
-
-route::post('management','managementcontroller@student');
-
-route::post('studentleaders','managementcontroller@studentleaders');
-
-route::post('history','managementcontroller@history');
-
-route::post('tstaff','managementcontroller@staff');
-
-route::post('staff','managementcontroller@adminstaff');
-
-route::post('sfees','adminacademicscontroller@update');
-
-route::post('suniforms','adminacademicscontroller@uniforms');
-
-route::post('tuniforms','adminacademicscontroller@teacher');
-
-route::post('tdepartment','admindepartmentcontroller@index');
-
-route::post('stenders','admintendercontroller@index');
-
-route::post('tassignments','adminassignmentcontroller@index');
-
-route::post('addteacher','adminteachercontroller@index');
-
-route::post('removeteacher','adminteachercontroller@remove');
-
-route::get('removeteacher','adminteachercontroller@teachers');
-
-route::resource('delete','adminteachercontroller');
-
+	//Send an SMS
 route::get('send','sendmessagecontroller@send');
-route::get('1',function(){
-	return "hello world";
-});
-
-
-route::get('login',function(){
-
-	return view('Pages.login');
-});
-
-
-route::post('login','logincontroller@login');
-
-
-
-
-
-
-
-
-
-
-
+route::get('agallery',function(){
+		return view('AdminPages.gallery');
 	
+});
+	
+route::post('agallery','gallerycontroller@index');
+	
+	
+route::get('messages','chatscontroller@index');
+	route::post('messages','chatscontroller@users');
+	
+	route::post('reply','chatscontroller@reply');
+	
+	route::get('sevents','admineventscontroller@super');
+	route::post('sevents','admineventscontroller@update');
+	
+	route::get('tevents','admineventscontroller@teacher');
+	route::post('tevents','admineventscontroller@update');
+	
+	
+	route::get('smanagement','managementcontroller@super');
+	route::post('smanagement','managementcontroller@update');
+	
+	
+	route::post('tmanagement','managementcontroller@teacher');
+	
+	route::post('management','managementcontroller@student');
+	
+	route::post('studentleaders','managementcontroller@studentleaders');
+	
+	route::post('history','managementcontroller@history');
+	
+	route::post('tstaff','managementcontroller@staff');
+	
+	route::post('staff','managementcontroller@adminstaff');
+	
+	route::post('sfees','adminacademicscontroller@update');
+	
+	route::post('suniforms','adminacademicscontroller@uniforms');
+	
+	route::post('tuniforms','adminacademicscontroller@teacher');
+	
+	route::post('tdepartment','admindepartmentcontroller@index');
+	
+	route::post('stenders','admintendercontroller@index');
+	
+	route::post('tassignments','adminassignmentcontroller@index');
+	
+	route::post('addteacher','adminteachercontroller@index');
+	
+	route::post('removeteacher','adminteachercontroller@remove');
+	
+	route::get('removeteacher','adminteachercontroller@teachers');
+	
+	route::resource('delete','adminteachercontroller');
+		
+});
 
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+require __DIR__.'/auth.php';

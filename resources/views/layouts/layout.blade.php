@@ -78,9 +78,19 @@
 					<span class="text-white">+254-722-397-744</span>
 				</div>
 				<ul class="nav navbar-nav navbar-right login">
-				<li ><a class="nav-link" href="login">Staff Portal</a></li>
+				<li ><a class="nav-link" href="{{ route('login') }}">Staff Portal</a></li>
 				<li><a class="nav-link" href="#">Alumni</a></li>
 			
+			@auth
+	<li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+    Logout
+</a>
+
+<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    {{ csrf_field() }}
+</form>
+</li>
+			@endauth
 			</ul>
 		</div>
 	</nav>

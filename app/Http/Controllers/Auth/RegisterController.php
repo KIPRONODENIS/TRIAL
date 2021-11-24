@@ -4,7 +4,7 @@ namespace trial\Http\Controllers\Auth;
 
 use trial\Http\Controllers\Controller;
 use Trial\Providers\RouteServiceProvider;
-use trial\User;
+use trial\user as User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
