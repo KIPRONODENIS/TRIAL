@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-	<style type="text/css">
+<style type="text/css">
 	@media screen and (max-width: 480px){
 		.gallery{
 
@@ -64,7 +64,7 @@
 	
 </head>
 <body class="bg-body">
-	<nav class="navbar navbar-expand-md navbar-light bg-green shadow-md">
+	<nav class="navbar navbar-expand-md navbar-light bg-green shadow-md top-nav-bar">
 		<div class="container">
 			
 			<ul class="nav navbar-nav">
@@ -75,14 +75,14 @@
 				</ul>
 				<div class="phone">
 					<span class="fa fa-phone social"></span>
-					<span class="text-white">+254-722-397-744</span>
+					<span class="text-white">+254-736-027-930</span>
 				</div>
 				<ul class="nav navbar-nav navbar-right login">
 				<li ><a class="nav-link" href="{{ route('login') }}">Staff Portal</a></li>
 				<li><a class="nav-link" href="#">Alumni</a></li>
 			
 			@auth
-	<li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+	<li><a class="nav-link"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
     Logout
 </a>
 
@@ -136,9 +136,8 @@
 	<div class="row footer-body">
 		<div class="col-md-4 col-sm-4 col-xs-12">
 			<h4>CONTACTS</h4>
-			<p>Tel:020-647-7376 </p>
-			<p>Phone: +254-799-0124</p>
-			<p>email:info@chepterithigh.com</p>
+			<p>Phone: +254-736-027-920</p>
+			<p>email:chepteritgirls@gmail.com</p>
 		</div>
 		<div class="col-md-4 col-sm-4 col-xs-12">
 			
@@ -159,7 +158,7 @@
 
 </div>
 	<div class="row border-top border-gray d-flex justify-content-center align-items-center copy">
-		<p>&copy;Copyright 2021 st.chepterit high school by <a href="#" class="uppercase">Bora techlife CO.</a></p>
+		<p>&copy;Copyright 2021 st.Joseph's chepterit high school by <a href="#" class="uppercase">Bora techlife CO.</a></p>
 	</div>
 </footer>
 

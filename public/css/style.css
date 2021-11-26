@@ -6,7 +6,7 @@ body{
 .social {
 	padding: 10px;
 	background-color: white;
-	color: blue;
+	color: rgb(29,63,31);
 	margin:0 4px;
 	font-size: 20px;
 	display: flex;
@@ -16,6 +16,7 @@ body{
 	height: 30px;
 	border-radius: 50%;
 	text-align: center;
+	transition: all 300ms ease-in;
 }
 
 .phone {
@@ -24,9 +25,13 @@ body{
 	align-items: center;
 }
 .social:hover{
-	background: white;
-	color: blue;
+	background: rgb(29,63,31);
+	color: white;
+	text-decoration: none;
 }
+.top-nav-bar .navbar-nav a {
+	text-decoration: none;
+} 
 .navbar .login li a.nav-link{
 	color:whitesmoke;
 	line-height: 10px;
@@ -135,7 +140,7 @@ body{
 }
 .events .card-body{
 	background: white;
-	color:rgb(29,63,31);
+	/* color:rgb(29,63,31); */
 }
 .events .card-header{
 	color: white;

@@ -2,6 +2,7 @@
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use trial\Http\Controllers\ClubsController;
 use Inertia\Inertia;
 
 /*
@@ -181,6 +182,29 @@ route::get('messages','chatscontroller@index');
 	route::get('removeteacher','adminteachercontroller@teachers');
 	
 	route::resource('delete','adminteachercontroller');
+
+	//Get  clubs
+	route::get('admin/clubs', [ClubsController::class, 'index'])->name('admin.clubs');
+	//Get Create View
+	route::get('admin/clubs/create',[ClubsController::class, 'create'])->name('admin.clubs.create');
+	//Store a club
+	route::post('admin/clubs',[ClubsController::class, 'store'])->name('admin.clubs.store');
+
+		//Update a club
+	route::get('admin/clubs/{id}/edit',[ClubsController::class, 'edit'])->name('admin.clubs.edit');
+	
+
+			//Update a club
+	route::put('admin/clubs/{id}',[ClubsController::class, 'update'])->name('admin.clubs.update');
+	
+
+	//View a club
+	route::get('admin/clubs/{id}',[ClubsController::class, 'view'])->name('admin.clubs.view');
+	
+
+		//View a club
+	route::delete('admin/clubs/{id}',[ClubsController::class, 'destroy'])->name('admin.clubs.destroy');
+	
 		
 });
 

@@ -26,7 +26,7 @@ index
 
 
     <div class="carousel-item active">
-      <img class="img-responsive" src="{{asset('storage/'.$datas->file_name)}}" alt="pic " width="100%" height="500">
+      <img class="img-responsive" src="{{asset('storage/'.$datas->file_name)}}" alt="pic " width="100%" height="600">
       <div class="carousel-caption">
 
        
@@ -42,7 +42,7 @@ index
 
 
     <div class="carousel-item ">
-      <img class="img-responsive"  src="{{asset('storage/'.$datas->file_name)}}" alt="pic BOYS" width="100%" height="500">
+      <img class="img-responsive"  src="{{asset('storage/'.$datas->file_name)}}" alt="pic BOYS" width="100%" height="600">
       <div class="carousel-caption">
 
        
@@ -58,7 +58,7 @@ index
 
 
     <div class="carousel-item ">
-      <img class="img-responsive"  src="{{asset('storage/'.$datas->file_name)}}" alt="KAPSEBET BOYS" width="100%" height="500">
+      <img class="img-responsive"  src="{{asset('storage/'.$datas->file_name)}}" alt="KAPSEBET BOYS" width="100%" height="600">
       <div class="carousel-caption">
 
        
@@ -76,7 +76,7 @@ index
 
 
     <div class="carousel-item ">
-      <img class="img-responsive"  src="{{asset('storage/'.$datas->file_name)}}" alt="KAPSEBET BOYS" width="100%" height="500">
+      <img class="img-responsive"  src="{{asset('storage/'.$datas->file_name)}}" alt="KAPSEBET BOYS" width="100%" height="600">
       <div class="carousel-caption">
 
        
@@ -104,7 +104,7 @@ index
 <div>
   <div class=" bg-white">
   @php
-$class="w-100";
+$class="w-75";
 if(isset($events) && count($events)>0) {
   $class="w-75";
 }
@@ -143,13 +143,15 @@ if(isset($events) && count($events)>0) {
   </div>
   
 </div>
-@if (isset($events) && count($events)>0)
+
     <div class="col-md-3 col-sm-4 col-xs-12 events" id="events">
   <div class="card">
     <div class=" card-header bg-green">
       <h3>Upcoming Events</h3>
     </div>
     <div class="card-body">
+
+    @if (isset($events) && count($events)>0)
       @foreach($events as $event)
 
       <div class="event-item">
@@ -160,8 +162,12 @@ if(isset($events) && count($events)>0) {
       </div>
 
     @endforeach
-        
-      
+        @else
+        <div class="info">
+        <h6>No events Yet</h6>
+        <p class="text-muted">Stay tuned for announcements and upcoming school events</p>
+        </div>
+    @endif
       
 
     </div>
@@ -172,7 +178,7 @@ if(isset($events) && count($events)>0) {
   </div>
   
 </div>
-@endif
+
 @if(isset($recents) && count($recents)>0)
 <div class="">
   <div class="col-md-4 col-sm-4 col-xs-12 top-stories">
@@ -244,175 +250,26 @@ if(isset($events) && count($events)>0) {
   <div class="container" >
 
   <div class="owl-carousel owl-theme clubs">
+
+  @if(isset($clubs) && count($clubs)>0)
+  @foreach($clubs as $club)
             <div class="item">
               <div class="card">
-                <div class="card-header" style="background:url(images/journalism.jpg);">
-                  <h3>JOUNALISM CLUB</h3>
+                <div class="card-header" style="background:url({{asset('storage/'. $club->image)}});">
+                  <h3>{{$club->name}}</h3>
 
                 </div>
                 <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
+                  <p>{{$club->description}}</p>
                 </div>
                 <div class="card-footer">
                   <a href="#" class="btn  bg-green text-white">Read more</a>
                 </div>
               </div>
             </div>
-            <div class="item">
-               <div class="card">
-                <div class="card-header" style="background:url(images/debate.jpg);">
-                  <h3>DEBATE CLUB</h3>
-
-                </div>
-                <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
-                </div>
-                <div class="card-footer">
-                  <a href="#" class="btn  bg-green text-white">Read more</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-               <div class="card">
-                <div class="card-header" style="background:url(images/wildlife.jpg);">
-                  <h3>WILDLIFE CLUB</h3>
-
-                </div>
-                <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
-                </div>
-                <div class="card-footer">
-                  <a href="#" class="btn  bg-green text-white">Read more</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-               <div class="card">
-                <div class="card-header" style="background:url(images/nacada.jpg);">
-                  <h3>NACADA CLUB</h3>
-
-                </div>
-                <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
-                </div>
-                <div class="card-footer">
-                  <a href="#" class="btn  bg-green text-white">Read more</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-               <div class="card">
-                <div class="card-header" style="background:url(images/drama.jpg);">
-                  <h3>DRAMA CLUB</h3>
-
-                </div>
-                <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
-                </div>
-                <div class="card-footer">
-                  <a href="#" class="btn  bg-green text-white">Read more</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-               <div class="card">
-                <div class="card-header" style="background:url(images/mathclub.jpg);">
-                  <h3>MATHEMATICS CLUB</h3>
-
-                </div>
-                <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
-                </div>
-                <div class="card-footer">
-                  <a href="#" class="btn  bg-green text-white">Read more</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-               <div class="card">
-                <div class="card-header" style="background:url(images/science2.jpg);">
-                  <h3>SCIENCE CLUB</h3>
-
-                </div>
-                <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
-                </div>
-                <div class="card-footer">
-                  <a href="#" class="btn  bg-green text-white">Read more</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-               <div class="card">
-                <div class="card-header" style="background:url(images/environmental.jpg);">
-                  <h3>ENVIRONMENTAL CLUB</h3>
-
-                </div>
-                <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
-                </div>
-                <div class="card-footer">
-                  <a href="#" class="btn  bg-green text-white">Read more</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-               <div class="card">
-                <div class="card-header" style="background:url(images/guidance.jpg);">
-                  <h3>GUIDING AND COUNSELING</h3>
-
-                </div>
-                <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
-                </div>
-                <div class="card-footer">
-                  <a href="#" class="btn  bg-green text-white">Read more</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-               <div class="card">
-                <div class="card-header" style="background:url(images/cu.jpg);">
-                  <h3>CHRISTIAN UNION CLUB</h3>
-
-                </div>
-                <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
-                </div>
-                <div class="card-footer">
-                  <a href="#" class="btn  bg-green text-white">Read more</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-               <div class="card">
-                <div class="card-header" style="background:url(images/ycs.jpg);">
-                  <h3>YCS CLUB</h3>
-
-                </div>
-                <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
-                </div>
-                <div class="card-footer">
-                  <a href="#" class="btn  bg-green text-white">Read more</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-               <div class="card">
-                <div class="card-header" style="background:url(images/sda.jpg);">
-                  <h3>SDA CLUB</h3>
-
-                </div>
-                <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, pro ea oportere rationibus cotidieque, idque dictas temporibus vix ne. Suas sanctus senserit ne duo. Alia sadipscing sea ea, ei essent laoreet albucius vel</p>
-                </div>
-                <div class="card-footer">
-                  <a href="#" class="btn  bg-green text-white">Read more</a>
-                </div>
-              </div>
-            </div>
-          </div>
+  @endforeach
+  @endif
+</div>
 </div>
 
 </div>

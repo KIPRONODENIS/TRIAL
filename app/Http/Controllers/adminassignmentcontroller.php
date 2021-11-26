@@ -19,7 +19,7 @@ class adminassignmentcontroller extends Controller
       // $management=$request->management;
 
        $filename=$request->file->getclientOriginalName();
-    $request->file->storeAs('public',$filename);
+       $request->file->storeAs('public',$filename);
       $assignments= new assignments;
 
        $assignments->file_subject=$request->subject;

@@ -7,30 +7,31 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{asset('plugins/font-awesome/css/font-awesome.min.css')}}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
   <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+  <link rel="stylesheet" href="{{asset('plugins/iCheck/flat/blue.css')}}">
   <!-- Morris chart -->
-  <link rel="stylesheet" href="plugins/morris/morris.css">
+  <link rel="stylesheet" href="{{asset('plugins/morris/morris.css')}}">
   <!-- jvectormap -->
-  <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <link rel="stylesheet" href="{{asset('plugins/jvectormap/jquery-jvectormap-1.2.2.css')}}">
   <!-- Date Picker -->
-  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+  <link rel="stylesheet" href="{{asset('plugins/datepicker/datepicker3.css')}}">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
+  <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker-bs3.css')}}">
   <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  <link rel="stylesheet" href="{{asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <!-- Include stylesheet -->
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
 
-  <link rel="stylesheet" href="plugins/style.css">
+  <link rel="stylesheet" href="{{asset('plugins/style.css')}}">
+
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -71,7 +72,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">chepterit High School</span>
     </a>
@@ -81,7 +82,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Super Admin</a>
@@ -129,7 +130,14 @@
             </ul>
           </li>
 
-
+          <li class="nav-item">
+            <a href="{{route('admin.clubs')}}" class="nav-link">
+              <i class="nav-icon fa fa-th"></i>
+              <p>
+                Clubs
+              </p>
+            </a>
+          </li>
 
           <li class="nav-item">
             <a href="sfees" class="nav-link">
@@ -171,7 +179,7 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="sevents" class="nav-link">
+            <a href="/sevents" class="nav-link">
               <i class="nav-icon fa fa-edit"></i>
               <p>
                  Events 
@@ -182,7 +190,7 @@
 
          
           <li class="nav-item has-treeview ">
-            <a href="home" class="nav-link">
+            <a href="/home" class="nav-link">
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
                 Carousel
@@ -193,7 +201,7 @@
           </li>
 
           <li class="nav-item has-treeview">
-            <a href="studentleaders" class="nav-link">
+            <a href="/studentleaders" class="nav-link">
               <i class="nav-icon fa fa-pie-chart"></i>
               <p>
                 Student leaders
@@ -204,7 +212,7 @@
           </li>
   
            <li class="nav-item has-treeview">
-            <a href="agallery" class="nav-link">
+            <a href="/agallery" class="nav-link">
               <i class="nav-icon fa fa-picture-o"></i>
               <p>
             Gallery
@@ -215,7 +223,7 @@
           </li>
            
           <li class="nav-item has-treeview">
-            <a href="clubs" class="nav-link">
+            <a href="/clubs" class="nav-link">
               <i class="nav-icon fa fa-edit"></i>
               <p>
                 Clubs Blog
@@ -225,7 +233,7 @@
           </li>
   
            <li class="nav-item has-treeview ">
-            <a href="tdepartment" class="nav-link ">
+            <a href="/tdepartment" class="nav-link ">
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
                 Departments
@@ -245,13 +253,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="addteacher" class="nav-link">
+                <a href="/addteacher" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Add Teacher</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="removeteacher" class="nav-link">
+                <a href="/removeteacher" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Remove Teacher</p>
                 </a>
@@ -259,7 +267,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="tstaff" class="nav-link">
+            <a href="/tstaff" class="nav-link">
               <i class="nav-icon fa fa-th"></i>
               <p>
 
@@ -269,7 +277,7 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="tassignments" class="nav-link">
+            <a href="/tassignments" class="nav-link">
               <i class="nav-icon fa fa-edit"></i>
               <p>
                 Assignments
@@ -286,7 +294,7 @@
           <li class="nav-header">Messages</li>
 
           <li class="nav-item has-treeview">
-            <a href="messages" class="nav-link">
+            <a href="/messages" class="nav-link">
               <i class="nav-icon fa fa-envelope-o"></i>
               <p>
          inbox
