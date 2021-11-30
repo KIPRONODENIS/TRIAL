@@ -5,6 +5,8 @@
 	font-family: palatino;
 
 }
+
+
 .main-menu{
 	width: 100%;
 }
@@ -48,49 +50,76 @@ font-size: 12px;
 	font-family: palatino;
 }
 	.navbar .container{
-		height:150px; 
+		height:auto; 
 	}
 	
 	.navbar .navbar-nav{
 		width: 100%;
-		height: 50px;
+		height: auto;
 
 	}
 	.phone{
 		margin-top: 20px;
 		margin-left: 20%;
 	}
+	.top-nav-bar  {
+		text-decoration: none;
+		display: none;
+
+	} 
 	.social {
 	padding: 10px;
 	background-color: blue;
 	color: white;
 	font-size: 20px;
+	display:none;
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
 	text-align: center;
 }
 .navbar-brand{
-	margin-left:20%; 
+	margin:auto; 
 	top:150px;
-	 
+}
+.bottom-nav {
+	width: 100% !important;
+}
 
-
+.bottom-nav div {
+	display: inline-block;
+	width:20%;
+}
+.bottom-nav div .school h1 {
+	font-size:11px !important;
+}
+.icon {
+    font-size: 2em;
+    color: rgb(29,63,31);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding-top: 6px;
 }
 .logo{
-	position: absolute;
+	/* position: absolute; */
 	margin-top: 60px;
 
+}
+.logo .nav-text  {
+	display: none;
 }
 nav.main-menu{
 	height: auto;
 	position: absolute;
-	top:165px;
+	/* top:165px; */
 
 }
 #carousel{
 	position:relative;
-	margin-top: 425px;
+	/* margin-top: 425px; */
 
 }
 .carousel-inner img{
@@ -106,7 +135,7 @@ nav.main-menu{
   	margin-top:3px;
   }
   #department{
-  	margin-top: 600px;
+  	/* margin-top: 600px; */
   	width: 100%;
   }
   #department h1{
@@ -117,9 +146,6 @@ nav.main-menu{
 	width: 100%;
 	text-align: center;
 
-}
-.departments .card{
-	transform: scale(0.8);
 }
 .dep-all .gallery{
 	margin-top: 1200px;
@@ -136,6 +162,15 @@ nav.main-menu{
 	text-align: center;
 	margin-left: 25px;
 }
+.clubs-header h1{
+	font-size: 1.5em;
+	
+}
+
+.heading-section h2 {
+    font-size: 20px;
+}
+
 /* AboutUs styles*/
 .aboutus .card-body img{
 	width:100%;
@@ -150,6 +185,14 @@ nav.main-menu{
 	font-size: 2em;
 	margin-bottom: 0px;
 
+}
+.aboutus h2 {
+font-size: 1.5rem;
+}
+
+.aboutus .paragraph {
+	font-size: 16px;
+	line-height: 1.5rem;
 }
 .management h1{
 	font-size: 1.8em;

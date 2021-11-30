@@ -12,20 +12,16 @@ index
 @if(count($data)>0)
 <div id="carousel" class="carousel slide" data-ride="carousel">
   <ul class="carousel-indicators">
-    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel" data-slide-to="1"></li>
-    <li data-target="#carousel" data-slide-to="2"></li>
-    <li data-target="#carousel" data-slide-to="3"></li>
-    
+    @foreach($data as $datas)
+    <li data-target="#carousel" data-slide-to="{{$loop->index}}" class="{{$loop->index ===0 ? 'active': ''}}"></li>
+    @endforeach
   </ul>
 
   <div class="carousel-inner">
           @foreach($data as $datas)
-              @if($datas->id==1)
 
 
-
-    <div class="carousel-item active">
+              <div class="carousel-item {{$loop->index ===0 ? 'active': ' '}}">
       <img class="img-responsive" src="{{asset('storage/'.$datas->file_name)}}" alt="pic " width="100%" height="600">
       <div class="carousel-caption">
 
@@ -35,60 +31,7 @@ index
        
       </div>   
     </div>
-    @endif
-
-     @if($datas->id==2)
-
-
-
-    <div class="carousel-item ">
-      <img class="img-responsive"  src="{{asset('storage/'.$datas->file_name)}}" alt="pic BOYS" width="100%" height="600">
-      <div class="carousel-caption">
-
-       
-        <h3>{{$datas->caption_heading }}</h3>
-        <p>{{$datas->description }}</p>
-       
-      </div>   
-    </div>
-    @endif
-
-     @if($datas->id==3)
-
-
-
-    <div class="carousel-item ">
-      <img class="img-responsive"  src="{{asset('storage/'.$datas->file_name)}}" alt="KAPSEBET BOYS" width="100%" height="600">
-      <div class="carousel-caption">
-
-       
-        <h3>{{$datas->caption_heading }}</h3>
-        <p>{{$datas->description }}</p>
-       
-      </div>   
-    </div>
-    @endif
-
-     @endforeach
-
-      @if($datas->id==4)
-
-
-
-    <div class="carousel-item ">
-      <img class="img-responsive"  src="{{asset('storage/'.$datas->file_name)}}" alt="KAPSEBET BOYS" width="100%" height="600">
-      <div class="carousel-caption">
-
-       
-        <h3>{{$datas->caption_heading }}</h3>
-        <p>{{$datas->description }}</p>
-       
-      </div>   
-    </div>
-    @endif
-    
-    
-   
+     @endforeach   
   </div>
 
   <a class="carousel-control-prev" href="#carousel" data-slide="prev">
@@ -110,29 +53,29 @@ if(isset($events) && count($events)>0) {
 }
   @endphp
     <div class="card-body">
-      <div class="row {{$class}} d-flex justify-content-between align-items-center bg-white">
-        <div class="col-md-2 col-sm-2 col-xs-12 ">
+      <div class="row {{$class}} d-inline d-lg-flex justify-content-between align-items-center bg-white bottom-nav">
+        <div class="col-md-2 col-sm-2 ">
           <div class="school">
-            <a href="about"><span class="fa fa-book icon"></span></a><h1>OUR SCHOOL</h1>
+            <a href="about"><span class="fa fa-book icon"></span></a><h1> SCHOOL</h1>
           </div>
         </div>
-        <div class="col-md-2 col-sm-2 col-xs-12 ">
+        <div class="col-md-2 col-sm-2 ">
           <div class="school">
             <a href="\"><span class="fa fa-pencil-square-o icon"></span></a><h1>EVENTS</h1>
           </div>
         </div>
-        <div class="col-md-2 col-sm-2 col-xs-12 ">
+        <div class="col-md-2 col-sm-2 ">
           <div class="school">
             <a href="about"><span class="fa fa-home icon"></span></a><h1>STAFF</h1>
           </div>
         </div>
-        <div class="col-md-2 col-sm-2 col-xs-12 ">
+        <div class="col-md-2 col-sm-2 ">
           <div class="school">
             <span class="fa fa-picture-o icon"></span><h1>GALLERY</h1>
           </div>
         </div>
      
-       <div class="col-md-2 col-sm-2 col-xs-12 ">
+       <div class="col-md-2 col-sm-2 col-xs-6 ">
           <div class="school">
             <span class="fa fa-picture-o icon"></span><h1>ALUMNI</h1>
           </div>
@@ -211,7 +154,7 @@ if(isset($events) && count($events)>0) {
 
 
  @if($Ddata)
-<div class="dep-all px-5">
+<div class="dep-all">
 <div class="row" id="department" >
   <div class="col-xs-12 col-md-12 text-center d-flex justify-content-center ali">
   <h1 class="py-4 text-black">DEPARTMENTS</h1>

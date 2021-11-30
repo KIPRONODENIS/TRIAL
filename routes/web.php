@@ -47,10 +47,7 @@ route::get('home',function(){
 	return view('AdminPages.home');
 
 });
-route::get('history',function(){
-	return view('AdminPages.history');
-
-});
+route::get('history','managementcontroller@getHistory');
 
 route::get('management',function(){
 	return view('AdminPages.management');
@@ -148,6 +145,7 @@ route::get('messages','chatscontroller@index');
 	
 	
 	route::get('smanagement','managementcontroller@super');
+	route::get('admin/management/{management}/edit','managementcontroller@super');
 	route::post('smanagement','managementcontroller@update');
 	
 	

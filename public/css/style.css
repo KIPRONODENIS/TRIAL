@@ -731,3 +731,8 @@ footer span{
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, .08);
   }
+
+  .aboutus .paragraph {
+	  font-size: 18px;
+	  line-height: 1.8rem;
+  }
