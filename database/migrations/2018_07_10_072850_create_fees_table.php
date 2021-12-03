@@ -18,7 +18,6 @@ class CreateFeesTable extends Migration
             $table->string('term1');
             $table->string('term2');
             $table->string('term3');
-            
             $table->timestamps();
         });
     }

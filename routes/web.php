@@ -3,6 +3,8 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use trial\Http\Controllers\ClubsController;
+// use trial\Http\Controllers\SubjectsController;
+
 use Inertia\Inertia;
 
 /*
@@ -47,49 +49,49 @@ route::get('home',function(){
 	return view('AdminPages.home');
 
 });
-route::get('history','managementcontroller@getHistory');
+route::get('admin/history','managementcontroller@getHistory');
 
-route::get('management',function(){
+route::get('admin/management',function(){
 	return view('AdminPages.management');
 
 });
 
-route::get('staff',function(){
+route::get('admin/staff',function(){
 	return view('AdminPages.staff');
 
 });
 
-route::get('studentleaders',function(){
+route::get('admin/studentleaders',function(){
 	return view('AdminPages.studentleaders');
 
 });
 
 
-route::get('clubs',function(){
+route::get('admin/clubs',function(){
 	return view('AdminPages.clubs');
 
 });
 
-route::get('tassignments',function(){
+route::get('admin/tassignments',function(){
 	return view('TeacherPages.assignments');
 
 });
 
-route::get('tdepartment',function(){
+route::get('admin/tdepartment',function(){
 	return view('TeacherPages.Department');
 
 });
 
-route::get('tmanagement',function(){
+route::get('admin/tmanagement',function(){
 	return view('TeacherPages.management');
 
 });
-route::get('tstaff',function(){
+route::get('admin/tstaff',function(){
 	return view('TeacherPages.staff');
 
 });
 
-route::get('tuniforms',function(){
+route::get('admin/tuniforms',function(){
 	return view('TeacherPages.uniforms');
 
 });
@@ -107,20 +109,14 @@ route::get('removeteacher',function(){
 
 
 
-route::get('sfees',function(){
-	return view('superPages.schoolFees');
 
-});
+route::resource('admin/sfees',FeesController::class);
 route::get('stenders',function(){
 	return view('superPages.addtender');
 
 });
 route::resource('dtenders','deletetendercontroller');
-route::get('suniforms',function(){
-	return view('superPages.uniforms');
-
-});
-
+route::resource('admin/suniforms', UniformController::class);
 
 	//Send an SMS
 route::get('send','sendmessagecontroller@send');
@@ -203,6 +199,10 @@ route::get('messages','chatscontroller@index');
 		//View a club
 	route::delete('admin/clubs/{id}',[ClubsController::class, 'destroy'])->name('admin.clubs.destroy');
 	
+
+
+	//subjects
+	route::resource('admin/subjects', SubjectsController::class);
 		
 });
 

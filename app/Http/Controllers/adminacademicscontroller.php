@@ -39,7 +39,7 @@ class adminacademicscontroller extends Controller
 
               session()->flash('message',' updated succesfully.');
 
-         return redirect('/sfees');
+         return redirect('/admin/sfees');
 
 
 

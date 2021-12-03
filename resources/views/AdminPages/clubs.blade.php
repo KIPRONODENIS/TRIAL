@@ -1,16 +1,21 @@
 @extends('layouts.super')
 
 @section('content')
-<h4 class="ml-4">CLUBS AND SOCIETIES 
+<h4 class="ml-4 w-3/4 mx-auto mb-3">CLUBS AND SOCIETIES 
 <a href="{{route('admin.clubs.create')}}" class="btn btn-success text-white btn-md">
 Create
 </a>
 </h4>
-<div class="d-flex px-2 h-100 w-100 justify-content-center align-items-center">
+<div class="d-flex px-2 h-100 pb-3 justify-content-center align-items-center card w-3/4 mx-auto">
+@if(session()->has('message'))
+<div class="alert alert-success">
+{{session()->get('message')}}
+</div>
+@endif
 
 
 @if(isset($clubs) && count($clubs)> 0 )
-<table class="table">
+<table class="table table-auto  ">
     <thead>
       <tr>
         <th>Name</th>
@@ -33,7 +38,7 @@ Create
          <form action="{{route('admin.clubs.destroy', $club->id)}}" method="post">
          @method('delete')
          @csrf
-         <button type="submit" class="btn btn-danger btn-sm">submit</button>
+         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
          </form>
           </span>
           </td>

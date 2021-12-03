@@ -24,6 +24,8 @@
   <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker-bs3.css')}}">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="{{asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
+{{-- Tailwind css --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <!-- Include stylesheet -->
@@ -140,7 +142,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="sfees" class="nav-link">
+            <a href="{{url('admin/sfees')}}" class="nav-link">
               <i class="nav-icon fa fa-th"></i>
               <p>
                 School Fee
@@ -170,7 +172,7 @@
           
            
           <li class="nav-item has-treeview">
-            <a href="suniforms" class="nav-link">
+            <a href="{{url('admin/suniforms')}}" class="nav-link">
               <i class="nav-icon fa fa-edit"></i>
               <p>
                  School Uniforms 
@@ -389,6 +391,7 @@
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
 
 
 <!-- Include the Quill library -->

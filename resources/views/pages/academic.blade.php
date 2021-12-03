@@ -12,57 +12,65 @@ academics
 			
 		</div>
 	</div>
+
+	<div class='container mt-5 m-auto'>
+	<div class="mt-5 flex justify-center align-items-center bg-white rounded ">
+	  <div class="col-xs-12 col-md-12 text-center d-flex flex-column justify-content-center align-items-center">
+      <h4 class="pt-4 pb-2 text-black text-uppercase">Our Vision</h4>
+	   <p class=" text-black w-75 mx-auto">To be a Girl's school of choice in academic excellence, character and spiritial building</p>
+	   <p>Guided by core values which are: Service, integrity, Professionalism, and Teamwork</p>
+      </div>
+
+	   <div class="col-xs-12 col-md-12 text-center d-flex flex-column justify-content-center align-items-center">
+      <h4 class="pt-4 pb-2 text-black text-uppercase">Our Mission</h4>
+	   <p class=" text-black w-75 mx-auto">To provide conducive environment for a quality education and developement of effective career, character and spiritual being of students</p>
+      </div>
+  
+	</div>
+	</div>
 	<div class="container subjects">
 		<div class="card">
 			<div class="card-body subject-body">
 				<div class="row">
-					<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="w-100">
 						
 						<div class="card">
 							<div class="card-body">
-								<h1>SUBJECTS OFFERED</h1>
-								<div class="subjects-no">
-									<p>12</p>
-								</div>
+								<h4>SUBJECTS OFFERED 
+									<span class="float-right">{{isset($subjects) ? count($subjects) : 0 }}</span>
+								</h4>
+								
 							</div>
 						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						
-						<div class="card">
-							<div class="card-body subjects-list">
-								<h2> LIST OF SUBJECTS</h2>
-								<div class="pull-right">
-									<ul>
-										<li> <span class="fa fa-check check"></span>English</li>
-										<li><span class="fa fa-check check"></span>Kiswahili</li>
-										<li><span class="fa fa-check check"></span>C.R.E</li>
-										<li><span class="fa fa-check check"></span>Physics</li>
-										<li><span class="fa fa-check check"></span>Chemistry</li>
-										<li><span class="fa fa-check check"></span>biology</li>
+
+						<div class="">
+							<div class=" w-100">
+								
+								<div  class="w-100">
+									<ul class="col d-flex flex-wrap justify-between">
+										@foreach($subjects as $subject)
+										<li class="card col-12 col-lg-auto m-2 px-5 w-1/3 py-2 shadow flex space-x-2"> 
+										<span class="fa fa-check check m-auto mb-1"></span>
+										<span class="whitespace-no-wrap text-center">{{$subject->name}}</span></li>
+										@endforeach
+
 									</ul>
 								</div>
-								 <div>
-									<ul>
-										<li><span class="fa fa-check check"></span>Agriculture</li>
-										<li><span class="fa fa-check check"></span>Business Studies</li>
-										<li><span class="fa fa-check check"></span>History</li>
-										<li><span class="fa fa-check check"></span>Geography</li>
-										<li><span class="fa fa-check check"></span>mathematics</li>
-										<li><span class="fa fa-check check"></span>Computer Studies</li>
-									</ul>
-								</div>
+
 								
 							</div>
 						</div>
 					</div>
+				
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="row clubs-header">
+	<div class="row ">
 	
-	<h2>SCHOOL UNIFORMS:</h2>
+  <div class="col-xs-12 col-md-12 text-center d-flex justify-content-center ali">
+  <h1 class="py-4 text-black">SCHOOL UNIFORMS</h1>
+  </div>
 </div>
 <div class="row " id="uniform">
 	<div class="container uniforms" >
@@ -73,7 +81,7 @@ academics
 
 
             <div class="item">
-              <div class="card">
+              <div class="card uniform-card">
             
                   <img class="img-responsive card-img-top"  src="{{asset('storage/'.$uniformtype->file_name)}}">
               		
@@ -81,8 +89,8 @@ academics
               	<div class="card-body">
               		<p>{{$uniformtype->description }} </p>
               	</div>
-              	<div class="card-footer">
-              		<p>SCHOOL TIE</p>
+              	<div class="card-footer ">
+              		<p>{{$uniformtype->name}}</p>
               	</div>
               </div>
             </div>
@@ -98,9 +106,11 @@ academics
           </div>
 </div>
 </div>
-<div class="container fees"  id="fees">
-	<h1>SCHOOL FEES</h1>
-	<div class="card fees-body">
+<div class="container " >
+  <div class="col-xs-12 col-md-12 text-center d-flex justify-content-center ali">
+  <h1 class="py-4 text-black">Fees</h1>
+  </div>
+	<div class="card fees-body mb-5">
 		<div class="card-body">
 			<div class="row">
 
@@ -167,7 +177,9 @@ academics
 	</div>
 </div>
 <div class="container-fluid awards" style="background-image: url(images/cup2.jpg); ">
-	<h1>ACADEMIC AWARDS</h1>
+	  <div class="col-xs-12 col-md-12 text-center d-flex justify-content-center ali">
+  <h1 class="py-4 text-black">Academic Awards</h1>
+  </div>
 	<div class="row">
 		<div class="awards-body">
 			<ul>
