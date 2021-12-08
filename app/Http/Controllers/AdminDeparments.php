@@ -4,7 +4,7 @@ namespace trial\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class FeesController extends Controller
+class AdminDeparments extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,13 +13,8 @@ class FeesController extends Controller
      */
     public function index()
     {
-    $fees = \trial\fees::all();
-     
-    return view('superPages.fees.index', compact('fees'));
-    
+        //
     }
-        
-    
 
     /**
      * Show the form for creating a new resource.
@@ -28,7 +23,7 @@ class FeesController extends Controller
      */
     public function create()
     {
-        return view('superPages.schoolFees');
+        //
     }
 
     /**
@@ -61,8 +56,7 @@ class FeesController extends Controller
      */
     public function edit($id)
     {
-        $fee = \trial\fees::find($id) ?? null;
-        return view('superPages.schoolFees', compact('fee'));
+        //
     }
 
     /**

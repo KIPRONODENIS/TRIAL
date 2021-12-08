@@ -113,16 +113,17 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="main-menu">
-		<div class="container">
-			<ul class="navbar-nav navigation">
+		<div class="container mx-auto">
+			<ul class="navbar-nav navigation mx-auto">
 				<li nav-item><a class="nav-link" href="/">HOME</a></li>
-				<li nav-item><a class="nav-link" href="about">ABOUT US</a></li>
-				<li nav-item><a class="nav-link" href="academic">ACADEMICS</a></li>
-				<li nav-item><a class="nav-link" href="department">DEPARTMENTS</a></li>
+				<li nav-item><a class="nav-link" href="{{url('about')}}">ABOUT US</a></li>
+				<li nav-item><a class="nav-link" href="{{url('academic')}}">ACADEMICS</a></li>
+				<li nav-item><a class="nav-link" href="{{url('department')}}">DEPARTMENTS</a></li>
 				<li nav-item><a class="nav-link" href="/">NEWS & EVENTS</a></li>
-				<li nav-item><a class="nav-link" href="tender">TENDERS</a></li>
-				<li nav-item><a class="nav-link" href="assignment">ASSIGNMENTS</a></li>
-				<li nav-item><a class="nav-link" href="contactus">CONTACT US</a></li>
+				{{-- <li nav-item><a class="nav-link" href="tender">TENDERS</a></li> --}}
+				<li nav-item><a class="nav-link" href="{{url('gallery')}}">GALLERY</a></li>
+				<li nav-item><a class="nav-link" href="{{url('assignment')}}">ASSIGNMENTS</a></li>
+				<li nav-item><a class="nav-link" href="{{url('contactus')}}">CONTACT US</a></li>
 			</ul>
 		</div>
 	</div>

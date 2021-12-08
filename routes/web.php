@@ -77,10 +77,7 @@ route::get('admin/tassignments',function(){
 
 });
 
-route::get('admin/tdepartment',function(){
-	return view('TeacherPages.Department');
-
-});
+route::resource('admin/tdepartment',AdminDeparmentsController::class);
 
 route::get('admin/tmanagement',function(){
 	return view('TeacherPages.management');
@@ -120,10 +117,8 @@ route::resource('admin/suniforms', UniformController::class);
 
 	//Send an SMS
 route::get('send','sendmessagecontroller@send');
-route::get('agallery',function(){
-		return view('AdminPages.gallery');
-	
-});
+
+route::resource('admin/gallery',AdminGalleryController::class);
 	
 route::post('agallery','gallerycontroller@index');
 	

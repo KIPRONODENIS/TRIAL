@@ -4,7 +4,7 @@ namespace trial\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class FeesController extends Controller
+class AdminGalleryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,13 +13,9 @@ class FeesController extends Controller
      */
     public function index()
     {
-    $fees = \trial\fees::all();
-     
-    return view('superPages.fees.index', compact('fees'));
-    
+        $gallerys = \trial\gallery::all();
+        return view('superPages.gallery.index', compact('gallerys'));
     }
-        
-    
 
     /**
      * Show the form for creating a new resource.
@@ -28,7 +24,10 @@ class FeesController extends Controller
      */
     public function create()
     {
-        return view('superPages.schoolFees');
+        
+        return view('AdminPages.gallery');
+        
+        
     }
 
     /**
@@ -39,7 +38,43 @@ class FeesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $is_edit = $request->has('id') ?? false;
+
+
+    	$this->validate($request,[	
+            'title' => 'required',
+            'description' => 'required',
+            'file'=> !$is_edit ? 'image|mimes:jpeg,png,jpg,gif,svg|max:2048' : ''
+        ]);
+      
+
+        if($request->hasFile('file')){
+
+            $filename=$request->file->getclientOriginalName();
+            $request->file->storeAs('public',$filename);
+      
+        }
+        
+
+        if($is_edit){
+            $gallery = \trial\gallery::find($request->id);
+
+        }else{
+            $gallery=new \trial\gallery;
+
+        }
+
+     // $management=$request->management;
+
+     $gallery->title=$request->title;
+     $gallery->description=$request->description;
+     $gallery->file_name=$request->hasFile('file') ?  $filename : $gallery->file_name;
+
+       $gallery->save();
+
+             session()->flash('message',' updated succesfully.');
+
+        return redirect('/admin/gallery');
     }
 
     /**
@@ -61,8 +96,12 @@ class FeesController extends Controller
      */
     public function edit($id)
     {
-        $fee = \trial\fees::find($id) ?? null;
-        return view('superPages.schoolFees', compact('fee'));
+        //
+        $gallery = \trial\gallery::find($id);
+        return view('AdminPages.gallery',compact('gallery'));
+
+    
+
     }
 
     /**

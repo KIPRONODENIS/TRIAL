@@ -1,4 +1,4 @@
-@extends('layouts.teacher')
+@extends('layouts.super')
 
 @section('content')
 
@@ -18,15 +18,25 @@
       <p class="alert alert-success">{{session()->get('message')}}</p>
 
       @endif
-<form role="form" action="tdepartment" method="post" enctype="multipart/form-data">
+<form role="form" action="{{url('admin/tdepartment')}}" method="post" enctype="multipart/form-data">
 
   {{csrf_field()}}
+
+  @php
+$department = $department ?? null;
+
+  @endphp
+
+  @if(isset($department))
+  <input type="hidden" name="id" value="{{$department->id}}">
+  @endif
+
                 <div class="card-body">
 
                 	 <div class="form-group">
                 		
                 		<label for="selectdepartment">Department name</label>
-                    <input type="text" name="name" class="form-control" id="" placeholder="e.g Mathematics">
+                    <input type="text" name="name" class="form-control" id="" value="{{$department->name ?? old('name') }}" placeholder="e.g Mathematics">
                 	</div>
                   
                   <div class="form-group">
@@ -36,7 +46,9 @@
                         <input type="file" class="" name="file">
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                       </div>
-                   
+                   @if($department) 
+                    <img src="{{asset('storage/'.$department->file_name)}}" width="100px" height="100px">
+                    @endif
                     </div>
                   </div>
                   <div class="form-group">
@@ -45,7 +57,7 @@
                 		</label>
 
                  <textarea name="department" rows="10" class="form-control" id="department">
-                 	
+                 	{{$department->description ?? old('department')}}
                  </textarea>
                  </div>
                  

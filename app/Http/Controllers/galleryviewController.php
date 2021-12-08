@@ -9,8 +9,9 @@ class galleryviewController extends Controller
 {
    public function index(){
 
-$data=gallery::all();
+  $data=gallery::all();
 
+  
 	return view('pages.gallery',compact('data'));
 
 }

@@ -459,13 +459,15 @@ footer span{
 	
 	list-style: none;
 }
+
+
 .department-page .card-body{
 	background:#fff;
 	color: rgb(29,63,31);
 
 }
 .department-page img{
-	max-width: 100px;
+	/* max-width: 100px; */
 	min-height: 100px;
     float:left;
 
@@ -755,4 +757,34 @@ footer span{
   .aboutus .paragraph {
 	  font-size: 18px;
 	  line-height: 1.8rem;
+  }
+
+  .overlay {
+	  height:100%;
+	  width:100%;
+	  position:absolute;
+	  top:0;
+	  z-index:1;
+	  background:rgba(0,0,0,0.7);
+	  display:none;
+  }
+  .overlay .text {
+	  position:absolute;
+	  top:50%;
+	  left:50%;
+	  transform:translate(-50%,-50%);
+	  color:#fff;
+	  font-size:20px;
+	  font-weight:600;
+	  text-align:center;
+  }
+  .gallery img{
+	  transition: all 1s ease-in-out;
+  }
+  .gallery:hover .overlay {
+	  display:block;
+	
+  }
+  .gallery:hover img {
+	  transform:scale(calc(1.2 - 0.1 * (1 - 0.2)));
   }
